@@ -6,8 +6,10 @@ export default {
       colors: {
         primary: "#35373d",
         secondary: {
-          100: "#494b51",
-          200: "#8f9297",
+          100: "#171717",
+          200: "#494b51",
+          300: "#8f9297",
+          400: "#ededed",
         },
         words: {
           100: "#b5b5b5",
