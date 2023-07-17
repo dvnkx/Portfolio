@@ -21,9 +21,18 @@ export default {
         body: ["Epilogue"],
       },
       spacing: {
+        11: "5rem",
+        12: "5.5rem",
         15: "7rem",
         20: "10rem",
         23: "12rem",
+        30: "17rem",
+      },
+      height: {
+        86: "312px",
+      },
+      width: {
+        104: "416px",
       },
     },
   },

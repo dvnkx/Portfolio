@@ -2,7 +2,7 @@ import Widget from "./Widget";
 
 const Introduction = () => {
   return (
-    <section className="flex mx-15 my-20">
+    <section id="intro" className="flex mx-15 mt-20 mb-80">
       <div className="w-2/3">
         <h1 className="text-secondary-100 font-medium text-7xl tracking-wide dark:text-words-200">
           I invent and develop applications.
@@ -11,7 +11,7 @@ const Introduction = () => {
           I'm a frontend developer with a passion for great design and user
           experiences.
         </p>
-        <a className="flex items-center cursor-pointer mt-23">
+        <a href="#projects" className="flex items-center cursor-pointer mt-23">
           <h2 className="text-words-100 tracking-wide font-light text-3xl">
             Explore my Projects
           </h2>
@@ -21,7 +21,7 @@ const Introduction = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="#8f9297"
-            className=" transition-all w-8 h-8 hover:mt-3 hover:ml-3"
+            className="ml-3 transition-all w-8 h-8 hover:w-9 hover:h-9"
             opacity={0.5}
           >
             <path
