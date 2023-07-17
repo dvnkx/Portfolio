@@ -20,6 +20,11 @@ export default {
       fontFamily: {
         body: ["Epilogue"],
       },
+      spacing: {
+        15: "7rem",
+        20: "10rem",
+        23: "12rem",
+      },
     },
   },
   plugins: [],

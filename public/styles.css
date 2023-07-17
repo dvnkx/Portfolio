@@ -536,9 +536,22 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.mx-10{
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
+.mx-15{
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+
+.my-20{
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-23{
+  margin-top: 12rem;
 }
 
 .flex{
@@ -557,12 +570,24 @@ video {
   height: 1.5rem;
 }
 
+.h-8{
+  height: 2rem;
+}
+
 .h-full{
   height: 100%;
 }
 
+.w-2\/3{
+  width: 66.666667%;
+}
+
 .w-6{
   width: 1.5rem;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .w-full{
@@ -594,11 +619,6 @@ video {
        column-gap: 4rem;
 }
 
-.bg-secondary-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
-}
-
 .bg-secondary-400{
   --tw-bg-opacity: 1;
   background-color: rgb(237 237 237 / var(--tw-bg-opacity));
@@ -609,9 +629,36 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-7xl{
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.font-light{
+  font-weight: 300;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
+.tracking-wide{
+  letter-spacing: 0.025em;
+}
+
+.text-secondary-100{
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 
 .text-words-100{
@@ -619,16 +666,54 @@ video {
   color: rgb(181 181 181 / var(--tw-text-opacity));
 }
 
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .display-none{
   display: none;
 }
 
-:is(.dark .dark\:bg-secondary-400){
-  --tw-bg-opacity: 1;
-  background-color: rgb(237 237 237 / var(--tw-bg-opacity));
+.hover\:left-3:hover{
+  left: 0.75rem;
+}
+
+.hover\:top-3:hover{
+  top: 0.75rem;
+}
+
+.hover\:ml-1:hover{
+  margin-left: 0.25rem;
+}
+
+.hover\:mt-1:hover{
+  margin-top: 0.25rem;
+}
+
+.hover\:ml-3:hover{
+  margin-left: 0.75rem;
+}
+
+.hover\:mt-3:hover{
+  margin-top: 0.75rem;
+}
+
+.hover\:h-9:hover{
+  height: 2.25rem;
+}
+
+.hover\:w-9:hover{
+  width: 2.25rem;
 }
 
 :is(.dark .dark\:bg-secondary-100){
   --tw-bg-opacity: 1;
   background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:text-words-200){
+  --tw-text-opacity: 1;
+  color: rgb(231 235 229 / var(--tw-text-opacity));
 }

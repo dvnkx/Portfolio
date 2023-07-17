@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import FaviconDark from "../assets/favicon-dark.png";
+import FaviconLight from "../assets/favicon-light.png";
 import { useEffect, useState } from "react";
 
 function NavBar() {
@@ -21,23 +23,27 @@ function NavBar() {
   }, [theme]);
 
   return (
-    <header className="flex h-32 justify-between mx-10 py-5">
+    <header className="flex h-32 justify-between mx-15 py-5">
       <a className="w-1/7 h-full flex-none" href="/">
-        <img alt="logo" className="w-full h-full" src={FaviconDark} />
+        <img
+          alt="logo"
+          className="w-full h-full"
+          src={theme === "dark" ? FaviconLight : FaviconDark}
+        />
       </a>
       <nav className="flex">
         <ul className="flex justify-center items-center gap-x-16 text-words-100 text-lg">
           <li>
-            <a href="/#intro">Introducing</a>
+            <Link to={"/intro"}>Introducing</Link>
           </li>
           <li>
-            <a href="/#projects">Projects</a>
+            <Link to={"/projects"}>Projects</Link>
           </li>
           <li>
-            <a href="/#about">About</a>
+            <Link to={"/about"}>About</Link>
           </li>
           <li>
-            <a href="/#contacts">Contact</a>
+            <Link to={"/contact"}>Contact</Link>
           </li>
           <button onClick={handleThemeSwitch}>
             {theme === "light" ? (
