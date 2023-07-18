@@ -1,17 +1,18 @@
 import { Project } from ".";
 import Chateo from "../assets/Chateo.svg";
 import LaceStore from "../assets/Lace-store.svg";
+import Portfolio from "../assets/Porfolio.svg";
 
 const Projects = () => {
   return (
     <section id="projects" className="mx-15 mt-20">
       <div className="flex items-center">
-        <h4 className="text-primary text-1xl font-light tracking-wide ">
-          Projects
+        <h4 className="text-primary text-1xl font-light tracking-wide">
+          PROJECTS
         </h4>
         <hr className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500" />
       </div>
-      <a href="#proj" className="flex mt-12 ml-11 ">
+      <a href="#proj" className="flex mt-12 ml-11">
         <p className="text-words-100 text-3xl tracking-wide w-4/5">
           Check out a few of the main projects I have worked on. They can
           introduce to you my current skills.
@@ -22,7 +23,7 @@ const Projects = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="#8f9297"
-          className="w-9 h-9 ml-2 transition-all hover:w-10 hover:h-10"
+          className="w-9 h-9 ml-2 transition-all hover:w-10 hover:h-10 opacity-50"
         >
           <path
             strokeLinecap="round"
@@ -35,8 +36,14 @@ const Projects = () => {
         <Project
           img={Chateo}
           name="Chateo"
-          description="Chat app Project"
+          description="Chat App"
           link="https://github.com/dvnkx/Chateo"
+        />
+        <Project
+          img={Portfolio}
+          name="Portfolio"
+          description="Current Project"
+          link="https://github.com/dvnkx/Portfolio"
         />
         <Project
           img={LaceStore}

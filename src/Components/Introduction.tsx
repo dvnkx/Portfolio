@@ -21,8 +21,7 @@ const Introduction = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="#8f9297"
-            className="ml-3 transition-all w-8 h-8 hover:w-9 hover:h-9"
-            opacity={0.5}
+            className="ml-3 transition-all w-8 h-8 hover:w-9 hover:h-9 opacity-50"
           >
             <path
               strokeLinecap="round"
