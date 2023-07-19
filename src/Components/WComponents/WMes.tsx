@@ -1,9 +1,9 @@
 import { useLottie } from "lottie-react";
-import dev from "../assets/widgets/dev.json";
+import mes from "../../assets/widgets/mes.json";
 
-const Widget = () => {
+const WMes = () => {
   const options = {
-    animationData: dev,
+    animationData: mes,
     loop: true,
   };
 
@@ -12,4 +12,4 @@ const Widget = () => {
   return <>{View}</>;
 };
 
-export default Widget;
+export default WMes;

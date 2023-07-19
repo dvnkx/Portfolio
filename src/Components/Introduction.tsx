@@ -1,4 +1,4 @@
-import Widget from "./Widget";
+import { WDev } from ".";
 
 const Introduction = () => {
   return (
@@ -31,7 +31,7 @@ const Introduction = () => {
           </svg>
         </a>
       </div>
-      <Widget />
+      <WDev />
     </section>
   );
 };

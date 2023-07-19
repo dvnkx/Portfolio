@@ -30,6 +30,8 @@ export default {
       },
       height: {
         86: "312px",
+        15: "7rem",
+        20: "10rem",
       },
       width: {
         104: "416px",
