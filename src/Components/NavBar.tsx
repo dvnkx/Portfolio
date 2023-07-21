@@ -22,7 +22,7 @@ function NavBar() {
   }, [theme]);
 
   return (
-    <header className="flex h-32 justify-between mx-15 py-5">
+    <header className="flex h-32 justify-between py-5">
       <a className="w-1/7 h-full flex-none" href="/">
         <img
           alt="logo"

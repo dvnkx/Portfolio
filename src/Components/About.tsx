@@ -2,7 +2,7 @@ import mads from "../assets/mads.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="mx-15 mt-20">
+    <section id="about" className="mt-20">
       <div className="flex items-center">
         <h4 className="text-primary text-1xl font-light tracking-wide">
           ABOUT

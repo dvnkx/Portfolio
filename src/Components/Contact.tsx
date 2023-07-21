@@ -2,7 +2,7 @@ import { Input, WMes } from "./index";
 
 const Contact = () => {
   return (
-    <section id="contact" className="mx-15 mt-20">
+    <section id="contact" className="mt-20">
       <div className="flex items-center">
         <h4 className="text-primary text-1xl font-light tracking-wide">
           CONTACT

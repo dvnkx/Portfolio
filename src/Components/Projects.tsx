@@ -5,7 +5,7 @@ import Portfolio from "../assets/Porfolio.svg";
 
 const Projects = () => {
   return (
-    <section id="projects" className="mx-15 mt-20">
+    <section id="projects" className="mt-20">
       <div className="flex items-center">
         <h4 className="text-primary text-1xl font-light tracking-wide">
           PROJECTS
