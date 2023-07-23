@@ -9,7 +9,7 @@ const About = () => {
         </h4>
         <hr className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500" />
       </div>
-      <section className="flex mt-12 ml-11 max-md:flex-wrap max-md:ml-0">
+      <section className="flex mt-12 ml-11 max-lg:flex-wrap max-lg:gap-10 max-md:ml-0">
         <p className="text-words-100 text-lg font-light tracking-wide w-4/6 mr-15 max-md:w-full max-md:m-0 ">
           Get a brief look at who I am and what I do. If you would like to know
           more about me and my interests, you can.
@@ -38,34 +38,34 @@ const About = () => {
             />
           </svg>
         </a>
-        <img className="hidden max-md:block max-md:mt-10 mr-auto" src={mads} />
+        <img className="hidden max-lg:block max-md:mt-10 mr-auto" src={mads} />
       </section>
       <section className="flex mt-12 ml-11 justify-between max-md:ml-0">
-        <div className="flex-none w-4/6 max-md:w-full">
+        <div className="w-4/6 max-md:w-full">
           <h4 className="text-primary text-1xl font-light tracking-wide">
             WHO AM I
           </h4>
-          <p className="text-words-100 tracking-wide font-light text-lg mt-10">
+          <p className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax">
             My name is Bogdan Lisniak. I am 21 years old, I live in Kyiv,
             Ukraine, and I'm a self-taught Frontend Developer.
           </p>
-          <p className="text-words-100 tracking-wide font-light text-lg mt-10">
+          <p className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax">
             I've always been interested in how a virtual environment works under
             the hood. Out of awareness I was also interested in creating a
             beautiful UI with awesome user experiences.
           </p>
-          <p className="text-words-100 tracking-wide font-light text-lg mt-10">
+          <p className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax">
             I enjoy the constant change in the technologies used in the area and
             love diving into new frameworks and technologies.
           </p>
-          <p className="text-words-100 tracking-wide font-light text-lg mt-10">
+          <p className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax">
             Spending time customizing, improving and tinkering with my work
             environment and tools is something I enjoy a lot, as it is something
             I use for many hours daily. It allows me to have it exactly as I
             desire.
           </p>
-          <img className="w-[300px] h-[300px] max-md:hidden" src={mads} />
         </div>
+        <img className="w-[300px] h-[300px] ml-10 max-lg:hidden" src={mads} />
       </section>
       <section className="mt-12 ml-11 max-md:ml-0 ">
         <h4 className="text-primary text-1xl font-light tracking-wide">
