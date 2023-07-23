@@ -49,6 +49,7 @@ export default {
       },
       screens: {
         biggerLg: "1100px",
+        lessMd: "744px",
       },
     },
   },

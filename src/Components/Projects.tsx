@@ -1,7 +1,7 @@
 import { Project } from ".";
 import Chateo from "../assets/Chateo.svg";
 import LaceStore from "../assets/Lace-store.svg";
-import Portfolio from "../assets/Porfolio.svg";
+import Portfolio from "../assets/Portfolio.svg";
 
 const Projects = () => {
   return (
@@ -12,7 +12,10 @@ const Projects = () => {
         </h4>
         <hr className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500" />
       </div>
-      <a href="#proj" className="flex mt-12 ml-11">
+      <a
+        href="#proj"
+        className="flex mt-12 ml-11 max-md:ml-0 max-lg:items-center"
+      >
         <p className="text-words-100 text-3xl tracking-wide w-4/5">
           Check out a few of the main projects I have worked on. They can
           introduce to you my current skills.
@@ -32,7 +35,10 @@ const Projects = () => {
           />
         </svg>
       </a>
-      <div id="proj" className="flex mt-10 ml-11 m pb-10 gap-10">
+      <div
+        id="proj"
+        className="flex flex-wrap mt-10 ml-11 pb-10 gap-10 max-md:ml-0 max-lessMd:flex-col max-lessMd:items-center"
+      >
         <Project
           img={Chateo}
           name="Chateo"

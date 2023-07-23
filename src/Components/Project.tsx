@@ -13,7 +13,7 @@ const Project = ({ img, name, description, link }: IProjProps) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="w-104 h-86 ease-in duration-300 hover:scale-105 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]">
+      <div className="w-104 h-86 ease-out duration-200 hover:scale-105 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] max-md:w-[312px]">
         <img className="h-full w-full" src={img} />
       </div>
       <h3 className="mt-4 text-secondary-300 dark:text-words-100">
