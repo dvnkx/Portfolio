@@ -48,6 +48,7 @@ export default {
         "open-menu": "open-menu 0.5s easy-in-out forwards",
       },
       screens: {
+        large: "1174px",
         biggerLg: "1100px",
         lessMd: "744px",
       },

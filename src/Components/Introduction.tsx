@@ -18,16 +18,15 @@ const Introduction = () => {
           href="#projects"
           className="flex items-center cursor-pointer mt-23 max-biggerLg:mt-15 w-full max-md:mt-10"
         >
-          <h2 className="text-words-100 tracking-wide font-light text-3xl">
+          <a className="text-words-100 tracking-wide font-light text-3xl peer">
             Explore my Projects
-          </h2>
+          </a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            stroke="#8f9297"
-            className="ml-3 w-8 h-8 hover:w-9 hover:h-9"
+            className="ml-3 w-[30px] h-[30px] stroke-words-100 peer-hover:scale-110 transition-all duration-300"
           >
             <path
               strokeLinecap="round"

@@ -12,32 +12,34 @@ const Projects = () => {
         </h4>
         <hr className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500" />
       </div>
+      <p className="text-words-100 text-2xl font-light tracking-wide w-4/5 mt-12 ml-11 max-md:ml-0">
+        Check out a few of the main projects I have worked on. They can
+        introduce to you my current skills.
+      </p>
       <a
         href="#proj"
-        className="flex mt-12 ml-11 max-md:ml-0 max-lg:items-center"
+        className="flex mt-12 ml-11 max-md:ml-0 items-center text-3xl text-words-100 tracking-wide font-light"
       >
-        <p className="text-words-100 text-3xl tracking-wide w-4/5">
-          Check out a few of the main projects I have worked on. They can
-          introduce to you my current skills.
-        </p>
+        <h2 className="peer">All Projects</h2>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
-          stroke="#8f9297"
-          className="w-9 h-9 ml-2 transition-all hover:w-10 hover:h-10 opacity-50"
+          stroke="currentColor"
+          className="w-[30px] h-[30px] ml-2 hover:scale-110 peer-hover:scale-110 transition-all duration-300"
         >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M19.5 4.5l-15 15m0 0h11.25m-11.25 0V8.25"
+            d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
           />
         </svg>
       </a>
+
       <div
         id="proj"
-        className="flex flex-wrap mt-10 ml-11 pb-10 gap-10 max-md:ml-0 max-lessMd:flex-col max-lessMd:items-center"
+        className="flex flex-wrap mt-10 ml-11 pb-10 gap-10 max-md:ml-0 max-lessMd:items-center"
       >
         <Project
           img={Chateo}

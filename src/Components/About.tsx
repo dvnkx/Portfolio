@@ -18,18 +18,17 @@ const About = () => {
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/dvnkx"
-          className="flex items-center max-md:mt-10"
+          className="flex items-center ml-10 max-md:ml-0 max-md:mt-10"
         >
-          <h1 className="dark:text-words-100 text-primary tracking-wide text-4xl font-light">
+          <a className="text-words-100 text-primary tracking-wide text-3xl font-light text-primary peer">
             More about me
-          </h1>
+          </a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            stroke="#8f9297"
-            className="w-9 h-9 opacity-50"
+            className="w-[30px] h-[30px] ml-2 stroke-words-100 peer-hover:scale-110 transition-all duration-300"
           >
             <path
               strokeLinecap="round"
@@ -41,7 +40,7 @@ const About = () => {
         <img className="hidden max-lg:block max-md:mt-10 mr-auto" src={mads} />
       </section>
       <section className="flex mt-12 ml-11 justify-between max-md:ml-0">
-        <div className="w-4/6 max-md:w-full">
+        <div className="w-3/6 max-lg:w-full">
           <h4 className="text-primary text-1xl font-light tracking-wide">
             WHO AM I
           </h4>
@@ -65,7 +64,7 @@ const About = () => {
             desire.
           </p>
         </div>
-        <img className="w-[300px] h-[300px] ml-10 max-lg:hidden" src={mads} />
+        <img className="w-[300px] h-[300px] max-lg:hidden " src={mads} />
       </section>
       <section className="mt-12 ml-11 max-md:ml-0 ">
         <h4 className="text-primary text-1xl font-light tracking-wide">
