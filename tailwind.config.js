@@ -10,6 +10,7 @@ export default {
           100: "#171717",
           200: "#494b51",
           300: "#8f9297",
+          500: "#dadada",
           400: "#ededed",
         },
         words: {
@@ -35,6 +36,16 @@ export default {
       },
       width: {
         104: "416px",
+      },
+      keyframes: {
+        "open-menu": {
+          "0%": { transform: "scaleX(0%)" },
+          "80%": { transform: "scaleX(75%)" },
+          "100%": { transform: "scaleX(70%)" },
+        },
+      },
+      animation: {
+        "open-menu": "open-menu 0.5s easy-in-out forwards",
       },
     },
   },

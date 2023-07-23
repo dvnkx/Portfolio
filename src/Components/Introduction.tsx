@@ -2,7 +2,7 @@ import { WDev } from ".";
 
 const Introduction = () => {
   return (
-    <section id="intro" className="flex mt-20 mb-80">
+    <section id="intro" className="flex pt-60 mb-80">
       <div className="w-2/3">
         <h1 className="text-secondary-100 font-medium text-7xl tracking-wide dark:text-words-200">
           I invent and develop applications.
