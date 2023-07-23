@@ -47,6 +47,9 @@ export default {
       animation: {
         "open-menu": "open-menu 0.5s easy-in-out forwards",
       },
+      screens: {
+        biggerLg: "1100px",
+      },
     },
   },
   plugins: [],

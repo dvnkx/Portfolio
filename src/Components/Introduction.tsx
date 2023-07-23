@@ -2,16 +2,22 @@ import { WDev } from ".";
 
 const Introduction = () => {
   return (
-    <section id="intro" className="flex pt-60 mb-80">
-      <div className="w-2/3">
-        <h1 className="text-secondary-100 font-medium text-7xl tracking-wide dark:text-words-200">
+    <section
+      id="intro"
+      className="relative flex pt-60 mb-80 max-biggerLg:pt-60 max-biggerLg:h-screen max-biggerLg:mb-0 max-md:pt-40"
+    >
+      <div className="w-2/3 max-biggerLg:w-full">
+        <h1 className="text-secondary-100 font-medium text-7xl tracking-wide dark:text-words-200 max-biggerLg:text-5xl">
           I invent and develop applications.
         </h1>
-        <p className="text-words-100 font-light text-lg mt-10">
+        <p className="text-words-100 font-light tracking-wide text-lg mt-10">
           I'm a frontend developer with a passion for great design and user
           experiences.
         </p>
-        <a href="#projects" className="flex items-center cursor-pointer mt-23">
+        <a
+          href="#projects"
+          className="flex items-center cursor-pointer mt-23 max-biggerLg:mt-15 w-full max-md:mt-10"
+        >
           <h2 className="text-words-100 tracking-wide font-light text-3xl">
             Explore my Projects
           </h2>
@@ -21,7 +27,7 @@ const Introduction = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="#8f9297"
-            className="ml-3 transition-all w-8 h-8 hover:w-9 hover:h-9 opacity-50"
+            className="ml-3 w-8 h-8 hover:w-9 hover:h-9"
           >
             <path
               strokeLinecap="round"
@@ -31,7 +37,9 @@ const Introduction = () => {
           </svg>
         </a>
       </div>
-      <WDev />
+      <div className="max-biggerLg:absolute max-biggerLg:bottom-0 max-biggerLg:left-30 max-biggerLg:w-3/4 max-md:left-5 max-md:bottom-0 max-md:w-full">
+        <WDev />
+      </div>
     </section>
   );
 };
