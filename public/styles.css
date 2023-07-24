@@ -846,6 +846,14 @@ video {
   gap: 2rem;
 }
 
+.gap-11{
+  gap: 5rem;
+}
+
+.gap-12{
+  gap: 5.5rem;
+}
+
 .gap-x-16{
   -moz-column-gap: 4rem;
        column-gap: 4rem;
@@ -1027,6 +1035,18 @@ video {
 .shadow-\[rgba\(13\2c _38\2c _76\2c _0\.19\)_0px_9px_20px\]{
   --tw-shadow: rgba(13, 38, 76, 0.19) 0px 9px 20px;
   --tw-shadow-colored: 0px 9px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-inner{
+  --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1328,6 +1348,16 @@ video {
   stroke: #fff;
 }
 
+@media not all and (min-width: 1536px){
+  .max-2xl\:w-full{
+    width: 100%;
+  }
+
+  .max-2xl\:w-1\/2{
+    width: 50%;
+  }
+}
+
 @media not all and (min-width: 1174px){
   .max-large\:mb-10{
     margin-bottom: 2.5rem;
@@ -1371,6 +1401,10 @@ video {
 
   .max-large\:w-\[90\%\]{
     width: 90%;
+  }
+
+  .max-large\:w-auto{
+    width: auto;
   }
 
   .max-large\:p-0{

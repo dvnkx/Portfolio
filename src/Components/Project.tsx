@@ -14,7 +14,7 @@ const Project = ({ img, name, description, link }: IProjProps) => {
       rel="noopener noreferrer"
     >
       <img
-        className="w-104 h-86 ease-out duration-200 hover:scale-105 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] max-large:w-[90%] max-large:h-full"
+        className="w-104 h-86 ease-out duration-200 hover:scale-105 max-large:w-full max-large:h-full"
         src={img}
       />
 
