@@ -20,15 +20,15 @@ const About = () => {
           href="https://github.com/dvnkx"
           className="flex items-center ml-10 max-md:ml-0 max-md:mt-10"
         >
-          <a className="text-words-100 text-primary tracking-wide text-3xl font-light text-primary peer">
+          <h2 className="text-words-100 text-primary tracking-wide text-3xl font-light text-primary peer">
             More about me
-          </a>
+          </h2>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            className="w-[30px] h-[30px] ml-2 stroke-words-100 peer-hover:scale-110 transition-all duration-300"
+            className="w-[30px] h-[30px] ml-2 stroke-words-100 peer-hover:scale-110 hover:scale-110 transition-all duration-300"
           >
             <path
               strokeLinecap="round"
@@ -46,7 +46,7 @@ const About = () => {
           </h4>
           <p className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax">
             My name is Bogdan Lisniak. I am 21 years old, I live in Kyiv,
-            Ukraine, and I'm a self-taught Frontend Developer.
+            Ukraine, and I&apos;m a self-taught Frontend Developer.
           </p>
           <p className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax">
             I've always been interested in how a virtual environment works under

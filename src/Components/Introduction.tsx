@@ -11,22 +11,22 @@ const Introduction = () => {
           I invent and develop applications.
         </h1>
         <p className="text-words-100 font-light tracking-wide text-lg mt-10">
-          I'm a frontend developer with a passion for great design and user
+          I&apos;m a frontend developer with a passion for great design and user
           experiences.
         </p>
         <a
           href="#projects"
           className="flex items-center cursor-pointer mt-23 max-biggerLg:mt-15 w-full max-md:mt-10"
         >
-          <a className="text-words-100 tracking-wide font-light text-3xl peer">
+          <h2 className="text-words-100 tracking-wide font-light text-3xl peer">
             Explore my Projects
-          </a>
+          </h2>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            className="ml-3 w-[30px] h-[30px] stroke-words-100 peer-hover:scale-110 transition-all duration-300"
+            className="ml-3 w-[30px] h-[30px] stroke-words-100 peer-hover:scale-110 hover:scale-110 transition-all duration-300"
           >
             <path
               strokeLinecap="round"

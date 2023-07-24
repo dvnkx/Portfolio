@@ -8,17 +8,22 @@ const Contact = () => {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_2i5mop5",
-        "template_iariqqm",
-        form && form.current,
-        "UzzsaGd8QGoKuGooq"
-      )
-      .then((result) => console.log(result)),
-      (err: Error) => {
-        console.log(err);
+    const [user_name, user_email, message] = form.current;
+
+    if (user_name.value === "" || user_email.value === "" || message === "")
+      return alert("All fields must be filled!");
+
+    emailjs.sendForm(
+      "service_2i5mop5",
+      "template_iariqqm",
+      form.current,
+      "UzzsaGd8QGoKuGooq"
+    ),
+      (err: string) => {
+        throw Error(err);
       };
+
+    (user_name.value = ""), (user_email.value = ""), (message.value = "");
   };
 
   return (
@@ -34,7 +39,7 @@ const Contact = () => {
           <p className="text-words-100 text-lg font-light tracking-wide ml-15 max-lg:m-0 max-lg:mb-10">
             Do not hesitate to contact me through the form here or by direct
             email on
-            <b className="bg-gradient-to-r from-neutral-500 via-violet-600 to-indigo-500 bg-clip-text text-transparent">
+            <b className="bg-gradient-to-r from-neutral-500 via-violet-600 to-indigo-500 bg-clip-text text-transparent px-1">
               dvnkxxxx@gmail.com
             </b>
             regardless of the subject.
@@ -58,13 +63,13 @@ const Contact = () => {
           />
           <div className="w-full mb-12">
             <label className="bg-gradient-to-r from-neutral-500 via-violet-600 to-indigo-500 bg-clip-text text-transparent  font-light tracking-wide text-3xl">
-              What's your message? *
+              What&apos;s your message? *
             </label>
             <br />
             <textarea
               name="message"
               className="mt-10 bg-transparent w-full outline-none text-words-100 border-b border-words-100 focus:border-primary text-lg"
-              placeholder="Hi Bogdan, let`s work!"
+              placeholder="Hi Bogdan, let's work!"
             ></textarea>
           </div>
           <button

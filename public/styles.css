@@ -700,6 +700,14 @@ video {
   margin-top: 1rem;
 }
 
+.ml-1{
+  margin-left: 0.25rem;
+}
+
+.mr-1{
+  margin-right: 0.25rem;
+}
+
 .flex{
   display: flex;
 }
@@ -943,6 +951,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -961,6 +974,10 @@ video {
 
 .pt-60{
   padding-top: 15rem;
+}
+
+.pr-1{
+  padding-right: 0.25rem;
 }
 
 .align-top{
@@ -1194,6 +1211,34 @@ video {
 .placeholder-shown\:border-secondary-200:placeholder-shown{
   --tw-border-opacity: 1;
   border-color: rgb(73 75 81 / var(--tw-border-opacity));
+}
+
+.autofill\:bg-transparent:-webkit-autofill{
+  background-color: transparent;
+}
+
+.autofill\:bg-transparent:autofill{
+  background-color: transparent;
+}
+
+.autofill\:bg-indigo-500:-webkit-autofill{
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+
+.autofill\:bg-indigo-500:autofill{
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+
+.autofill\:bg-yellow-200:-webkit-autofill{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+}
+
+.autofill\:bg-yellow-200:autofill{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
 .hover\:scale-105:hover{
