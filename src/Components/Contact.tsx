@@ -1,22 +1,32 @@
-import { useRef } from "react";
-import { Input } from "./index";
+import { useRef, useState } from "react";
+import { Input, Toast } from "./index";
 import emailjs from "@emailjs/browser";
 
-const Contact = () => {
-  const form = useRef<HTMLFormElement | any>("");
+export interface IToast {
+  showToast: () => void;
+}
 
-  const sendEmail = (e: any) => {
+const Contact = () => {
+  const formRef = useRef<HTMLFormElement | any>("");
+  const toastRef = useRef<IToast>(null);
+  const [toastType, setToastType] = useState<string>("");
+
+  const handleShowToast = () => {
+    toastRef.current && toastRef.current.showToast();
+  };
+
+  const sendEmail = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
-    const [user_name, user_email, message] = form.current;
+    const [user_name, user_email, message] = formRef.current;
 
     if (user_name.value === "" || user_email.value === "" || message === "")
-      return alert("All fields must be filled!");
+      return setToastType("yellow"), handleShowToast();
 
     emailjs.sendForm(
       "service_2i5mop5",
       "template_iariqqm",
-      form.current,
+      formRef.current,
       "UzzsaGd8QGoKuGooq"
     ),
       (err: string) => {
@@ -24,10 +34,25 @@ const Contact = () => {
       };
 
     (user_name.value = ""), (user_email.value = ""), (message.value = "");
+    setToastType("green");
+    handleShowToast();
   };
 
   return (
-    <section id="contact" className="mt-20">
+    <section id="contact" className="relative mt-20">
+      {toastType === "green" ? (
+        <Toast
+          message="Message has been sended!"
+          color="bg-toast-100"
+          ref={toastRef}
+        />
+      ) : (
+        <Toast
+          message="You need to fill all fields!"
+          color="bg-toast-200"
+          ref={toastRef}
+        />
+      )}
       <div className="flex items-center">
         <h4 className="text-primary text-1xl font-light tracking-wide">
           CONTACT
@@ -46,9 +71,9 @@ const Contact = () => {
           </p>
         </div>
         <form
-          ref={form}
+          ref={formRef}
           onSubmit={sendEmail}
-          className="ml-12 w-1/2 max-lg:w-full max-lg:ml-0"
+          className="ml-12 w-1/2 max-lg:w-full max-lg:ml-0 autofill:bg-transparent"
         >
           <Input
             label="What's your name? *"

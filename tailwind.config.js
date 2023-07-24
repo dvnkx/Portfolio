@@ -13,6 +13,10 @@ export default {
           500: "#dadada",
           400: "#ededed",
         },
+        toast: {
+          100: "rgb(36, 129, 70, 0.8)",
+          200: "rgb(251, 193, 45, 0.8)",
+        },
         words: {
           100: "#b5b5b5",
           200: "#e7ebe5",
