@@ -1,6 +1,8 @@
 import logo_dark from "../assets/logo-dark.svg";
 import logo_light from "../assets/logo-light.svg";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { navBarAnimation } from "../utils/animations";
 
 function NavBar() {
   const currentTheme = localStorage.getItem("theme");
@@ -65,7 +67,12 @@ function NavBar() {
   }, [dropDown]);
 
   return (
-    <header className="fixed top-0 left-0 bg-transparent z-40 w-full flex h-32 justify-between py-5 px-15 max-md:px-5 max-lg:px-10 max-md:overflow-visible">
+    <motion.header
+      variants={navBarAnimation}
+      initial="initial"
+      animate="animate"
+      className="fixed top-0 left-0 bg-transparent z-40 w-full flex h-32 justify-between py-5 px-15 max-md:px-5 max-lg:px-10 max-md:overflow-visible"
+    >
       <div
         className="hidden max-md:block z-40 absolute top-5 right-5 cursor-pointer"
         onClick={toggleDropDown}
@@ -182,7 +189,7 @@ function NavBar() {
           </button>
         </ul>
       </nav>
-    </header>
+    </motion.header>
   );
 }
 

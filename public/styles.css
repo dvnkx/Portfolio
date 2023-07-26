@@ -1407,6 +1407,12 @@ select:-webkit-autofill:focus {
   stroke: #fff;
 }
 
+@media not all and (min-width: 1280px){
+  .max-xl\:left-\[25\%\]{
+    left: 25%;
+  }
+}
+
 @media not all and (min-width: 1174px){
   .max-large\:mb-10{
     margin-bottom: 2.5rem;
@@ -1645,6 +1651,24 @@ select:-webkit-autofill:focus {
 @media not all and (min-width: 744px){
   .max-lessMd\:items-center{
     align-items: center;
+  }
+}
+
+@media not all and (min-width: 640px){
+  .max-sm\:top-\[5\%\]{
+    top: 5%;
+  }
+
+  .max-sm\:top-\[15\%\]{
+    top: 15%;
+  }
+
+  .max-sm\:left-\[5\%\]{
+    left: 5%;
+  }
+
+  .max-sm\:left-\[10\%\]{
+    left: 10%;
   }
 }
 

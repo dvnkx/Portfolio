@@ -21,7 +21,7 @@ const Toast = ({ color, message }: IToastProps, ref: React.Ref<IToast>) => {
     <div
       className={`${color} h-[88px] ${
         !show ? "w-0" : "w-[300px]"
-      } flex fixed top-5 left-[15%] z-50 rounded-md transition-all easy duration-300 max-md:left-[20%]`}
+      } flex fixed top-5 left-[15%] z-50 rounded-md transition-all easy duration-300 max-md:left-[20%] max-xl:left-[25%] max-sm:top-[15%] max-sm:left-[10%]`}
     >
       <div
         className={`${
