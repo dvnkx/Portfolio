@@ -1,4 +1,6 @@
 import { WDev } from ".";
+import { motion } from "framer-motion";
+import { introAnimation } from "../utils/animations";
 
 const Introduction = () => {
   return (
@@ -7,14 +9,27 @@ const Introduction = () => {
       className="relative flex pt-60 mb-80 max-biggerLg:pt-60 max-biggerLg:h-screen max-biggerLg:mb-0 max-md:pt-40"
     >
       <div className="w-2/3 max-biggerLg:w-full">
-        <h1 className="text-secondary-100 font-medium text-7xl tracking-wide dark:text-words-200 max-biggerLg:text-5xl">
+        <motion.h1
+          variants={introAnimation.title}
+          initial="initial"
+          animate="animate"
+          className="text-secondary-100 font-medium text-7xl tracking-wide dark:text-words-200 max-biggerLg:text-5xl"
+        >
           I invent and develop applications.
-        </h1>
-        <p className="text-words-100 font-light tracking-wide text-lg mt-10">
+        </motion.h1>
+        <motion.p
+          variants={introAnimation.subtitle}
+          initial="initial"
+          animate="animate"
+          className="text-words-100 font-light tracking-wide text-lg mt-10"
+        >
           I&apos;m a frontend developer with a passion for great design and user
           experiences.
-        </p>
-        <a
+        </motion.p>
+        <motion.a
+          variants={introAnimation.toProjects}
+          initial="initial"
+          animate="animate"
           href="#projects"
           className="flex items-center cursor-pointer mt-23 max-biggerLg:mt-15 w-full max-md:mt-10"
         >
@@ -34,11 +49,16 @@ const Introduction = () => {
               d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
             />
           </svg>
-        </a>
+        </motion.a>
       </div>
-      <div className="max-biggerLg:absolute max-biggerLg:bottom-0 max-biggerLg:left-30 max-biggerLg:w-3/4 max-md:left-5 max-md:bottom-0 max-md:w-full">
+      <motion.div
+        variants={introAnimation.workplace}
+        initial="initial"
+        animate="animate"
+        className="max-biggerLg:absolute max-biggerLg:bottom-0 max-biggerLg:left-30 max-biggerLg:w-3/4 max-md:left-5 max-md:bottom-0 max-md:w-full"
+      >
         <WDev />
-      </div>
+      </motion.div>
     </section>
   );
 };
