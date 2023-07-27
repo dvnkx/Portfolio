@@ -2,21 +2,62 @@ import { Project } from ".";
 import Chateo from "../assets/Chateo.svg";
 import LaceStore from "../assets/Lace-store.svg";
 import Portfolio from "../assets/Portfolio.svg";
+import { motion } from "framer-motion";
+import { projectsAnimation } from "../utils/animations";
+
+const projects = [
+  {
+    img: Chateo,
+    name: "Chateo",
+    description: "Chat App",
+    link: "https://github.com/dvnkx/Chateo",
+  },
+  {
+    img: Portfolio,
+    name: "Portfolio",
+    description: "Current Project",
+    link: "https://github.com/dvnkx/Portfolio",
+  },
+  {
+    img: LaceStore,
+    name: "Lace Store",
+    description: "Sneaker Store",
+    link: "https://github.com/dvnkx/Lace-Store",
+  },
+];
 
 const Projects = () => {
   return (
     <section id="projects" className="mt-20">
       <div className="flex items-center">
-        <h4 className="text-primary text-1xl font-light tracking-wide">
+        <motion.h4
+          variants={projectsAnimation.titleHeader}
+          initial="initial"
+          animate="animate"
+          className="text-primary text-1xl font-light tracking-wide"
+        >
           PROJECTS
-        </h4>
-        <hr className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500" />
+        </motion.h4>
+        <motion.hr
+          variants={projectsAnimation.sectionHeader}
+          initial="initial"
+          animate="animate"
+          className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500"
+        />
       </div>
-      <p className="text-words-100 text-2xl font-light tracking-wide w-4/5 mt-12 ml-11 max-md:ml-0">
+      <motion.p
+        variants={projectsAnimation.textAppearance}
+        initial="initial"
+        animate="animate"
+        className="text-words-100 text-2xl font-light tracking-wide w-4/5 mt-12 ml-11 max-md:ml-0"
+      >
         Check out a few of the main projects I have worked on. They can
         introduce to you my current skills.
-      </p>
-      <a
+      </motion.p>
+      <motion.a
+        variants={projectsAnimation.toProjects}
+        initial="initial"
+        animate="animate"
         href="#proj"
         className="flex mt-12 ml-11 max-md:ml-0 items-center text-3xl text-words-100 tracking-wide font-light"
       >
@@ -35,30 +76,23 @@ const Projects = () => {
             d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
           />
         </svg>
-      </a>
-
+      </motion.a>
       <div
         id="proj"
         className="flex flex-wrap mt-10 ml-11 pb-10 gap-10 max-md:ml-0 max-lessMd:items-center"
       >
-        <Project
-          img={Chateo}
-          name="Chateo"
-          description="Chat App"
-          link="https://github.com/dvnkx/Chateo"
-        />
-        <Project
-          img={Portfolio}
-          name="Portfolio"
-          description="Current Project"
-          link="https://github.com/dvnkx/Portfolio"
-        />
-        <Project
-          img={LaceStore}
-          name="Lace Store"
-          description="Sneakers Store"
-          link="https://github.com/dvnkx/Lace-Store"
-        />
+        {projects.map((project, i) => {
+          return (
+            <Project
+              key={i}
+              index={i}
+              img={project.img}
+              name={project.name}
+              description={project.description}
+              link={project.link}
+            />
+          );
+        })}
       </div>
     </section>
   );
