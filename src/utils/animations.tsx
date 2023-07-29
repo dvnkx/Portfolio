@@ -1,3 +1,35 @@
+export const fadeOut = {
+  initial: {
+    opacity: 0,
+  },
+  animate: (delay: number) => ({
+    opacity: 1,
+    transition: {
+      delay: delay,
+      duration: 1,
+      ease: [0.9, 0.1, 0.3, 0.96],
+    },
+  }),
+};
+
+export const fadeOutFromX = {
+  initial: {
+    scaleX: 0,
+    originX: 0,
+    opacity: 0,
+  },
+  animate: (delay: number) => ({
+    scaleX: 1,
+    originX: [0, 0, 0, 0, 0, 0, 0.5],
+    opacity: 1,
+    transition: {
+      delay: delay,
+      duration: 0.8,
+      ease: [0.9, 0.1, 0.3, 0.96],
+    },
+  }),
+};
+
 export const navBarAnimation = {
   initial: {
     opacity: 0,
@@ -91,14 +123,15 @@ export const projectsAnimation = {
       x: -200,
       opacity: 0,
     },
-    animate: {
+    animate: (delay: number) => ({
       x: 0,
       opacity: 1,
       transition: {
         easy: [0.6, 0.01, 0.85, 0.95],
         duration: 1,
+        delay: delay,
       },
-    },
+    }),
   },
 
   textAppearance: {
@@ -160,6 +193,24 @@ export const projectsAnimation = {
         duration: 0.5,
         ease: [0.6, 0.5, 0.5, 0.9],
         delay: 3.2 + duration * 0.5,
+      },
+    }),
+  },
+};
+
+export const aboutAnimations = {
+  sectionText: {
+    initial: {
+      y: 40,
+      opacity: 0,
+    },
+    animate: (delay: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 1 + delay * 0.3,
+        duration: 0.7,
+        ease: [0.9, 0.1, 0.3, 0.96],
       },
     }),
   },
