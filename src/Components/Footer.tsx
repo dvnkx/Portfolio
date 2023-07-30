@@ -20,7 +20,7 @@ const Footer = () => {
               variants={fadeOut}
               initial="initial"
               animate="animate"
-              className="hover:text-primary dark:hover:text-words-200"
+              className="relative hover:text-primary dark:hover:text-words-200 before:content-[''] before:w-[0%] before:h-px before:bg-words-100 before:absolute before:transition-all before:top-[27px] hover:before:w-[100%] max-md:before:h-[2px] max-md:before:top-[39px]"
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
