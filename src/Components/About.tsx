@@ -163,7 +163,7 @@ const About = () => {
               custom={i}
               initial="initial"
               animate="animate"
-              className="w-[40px] h-[40px] bg-secondary-300 fill-secondary-300 "
+              className="w-[40px] h-[40px]  fill-secondary-300 "
             />
           ))}
         </div>

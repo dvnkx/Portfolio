@@ -3,6 +3,7 @@ import logo_light from "../assets/logo-light.svg";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { navBarAnimation } from "../utils/animations";
+import { Link } from "react-scroll";
 
 function NavBar() {
   const currentTheme = localStorage.getItem("theme");
@@ -10,6 +11,25 @@ function NavBar() {
     currentTheme ? currentTheme : "dark"
   );
   const [dropDown, setDropDown] = useState(false);
+
+  const links = [
+    {
+      href: "intro",
+      title: "Introducing",
+    },
+    {
+      href: "projects",
+      title: "Projects",
+    },
+    {
+      href: "about",
+      title: "About",
+    },
+    {
+      href: "contact",
+      title: "Contact",
+    },
+  ];
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -122,38 +142,22 @@ function NavBar() {
         className="flex max-md:absolute max-md:top-0 max-md:right-0 max-md:h-[100vh] max-md:w-0 max-md:bg-secondary-500 max-md:dark:bg-secondary-200 duration-500 easy-out transition-all"
       >
         <ul className="flex justify-center items-center gap-x-16 text-words-100 text-lg max-md:flex-col max-md:m-10 max-md:text-3xl max-md:gap-6 max-md:items-start max-md:transition-all ">
-          <li>
-            <a
-              className="relative hover:text-secondary-200 dark:hover:text-words-200 before:content-[''] before:w-[0%] before:h-px before:bg-words-100 before:absolute before:transition-all before:top-[27px] hover:before:w-[100%] max-md:before:h-[2px] max-md:before:top-[39px]"
-              href="#intro"
-            >
-              Introducing
-            </a>
-          </li>
-          <li>
-            <a
-              className="relative hover:text-secondary-200 dark:hover:text-words-200 before:content-[''] before:w-[0%] before:h-px before:bg-words-100 before:absolute before:transition-all before:top-[27px] hover:before:w-[100%] max-md:before:h-[2px] max-md:before:top-[39px]"
-              href="#projects"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              className="relative hover:text-secondary-200 dark:hover:text-words-200 before:content-[''] before:w-[0%] before:h-px before:bg-words-100 before:absolute before:transition-all before:top-[27px] hover:before:w-[100%] max-md:before:h-[2px] max-md:before:top-[39px]"
-              href="#about"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              className="relative hover:text-secondary-200 dark:hover:text-words-200 before:content-[''] before:w-[0%] before:h-px before:bg-words-100 before:absolute before:transition-all before:top-[27px] hover:before:w-[100%] max-md:before:h-[2px] max-md:before:top-[39px]"
-              href="#contact"
-            >
-              Contact
-            </a>
-          </li>
+          {links.map((link) => {
+            return (
+              <li>
+                <Link
+                  className="relative cursor-pointer hover:text-secondary-200 dark:hover:text-words-200 before:content-[''] before:w-[0%] before:h-px before:bg-words-100 before:absolute before:transition-all before:top-[27px] hover:before:w-[100%] max-md:before:h-[2px] max-md:before:top-[39px]"
+                  to={link.href}
+                  smooth
+                  offset={50}
+                  duration={800}
+                  spy={true}
+                >
+                  {link.title}
+                </Link>
+              </li>
+            );
+          })}
           <button onClick={handleThemeSwitch}>
             {theme === "light" ? (
               <svg

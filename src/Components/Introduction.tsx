@@ -1,6 +1,7 @@
 import { WDev } from ".";
 import { motion } from "framer-motion";
 import { introAnimation } from "../utils/animations";
+import { Link } from "react-scroll";
 
 const Introduction = () => {
   return (
@@ -26,16 +27,20 @@ const Introduction = () => {
           I&apos;m a frontend developer with a passion for great design and user
           experiences.
         </motion.p>
-        <motion.a
+        <motion.div
           variants={introAnimation.toProjects}
           initial="initial"
           animate="animate"
-          href="#projects"
           className="flex items-center cursor-pointer mt-23 max-biggerLg:mt-15 w-full max-md:mt-10"
         >
-          <h2 className="text-words-100 tracking-wide font-light text-3xl peer">
+          <Link
+            to="projects"
+            smooth
+            duration={550}
+            className="text-words-100 tracking-wide font-light text-3xl peer"
+          >
             Explore my Projects
-          </h2>
+          </Link>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -49,7 +54,7 @@ const Introduction = () => {
               d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
             />
           </svg>
-        </motion.a>
+        </motion.div>
       </div>
       <motion.div
         variants={introAnimation.workplace}

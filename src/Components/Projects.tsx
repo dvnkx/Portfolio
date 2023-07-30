@@ -4,6 +4,7 @@ import LaceStore from "../assets/Lace-store.svg";
 import Portfolio from "../assets/Portfolio.svg";
 import { motion } from "framer-motion";
 import { projectsAnimation } from "../utils/animations";
+import { Link } from "react-scroll";
 
 const projects = [
   {
@@ -54,21 +55,28 @@ const Projects = () => {
         Check out a few of the main projects I have worked on. They can
         introduce to you my current skills.
       </motion.p>
-      <motion.a
+      <motion.div
         variants={projectsAnimation.toProjects}
         initial="initial"
         animate="animate"
-        href="#proj"
         className="flex mt-12 ml-11 max-md:ml-0 items-center text-3xl text-words-100 tracking-wide font-light"
       >
-        <h2 className="peer">All Projects</h2>
+        <Link
+          to="proj"
+          smooth
+          duration={550}
+          offset={-150}
+          className="peer cursor-pointer"
+        >
+          All Projects
+        </Link>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-[30px] h-[30px] ml-2 hover:scale-110 peer-hover:scale-110 transition-all duration-300"
+          className="w-[30px] h-[30px] ml-2 hover:scale-110 peer-hover:scale-110 transition-all duration-300 cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -76,7 +84,7 @@ const Projects = () => {
             d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
           />
         </svg>
-      </motion.a>
+      </motion.div>
       <div
         id="proj"
         className="flex flex-wrap mt-10 ml-11 pb-10 gap-10 max-md:ml-0 max-lessMd:items-center"
