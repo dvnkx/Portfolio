@@ -12,6 +12,22 @@ export const fadeOut = {
   }),
 };
 
+export const fadeOutY = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: delay,
+      duration: 1,
+      ease: [0.9, 0.1, 0.3, 0.96],
+    },
+  }),
+};
+
 export const fadeOutFromX = {
   initial: {
     scaleX: 0,
