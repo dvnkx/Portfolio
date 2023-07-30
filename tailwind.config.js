@@ -34,13 +34,10 @@ export default {
         30: "17rem",
       },
       height: {
-        86: "312px",
         15: "7rem",
         20: "10rem",
       },
-      width: {
-        104: "416px",
-      },
+
       keyframes: {
         "open-menu": {
           "0%": { transform: "scaleX(0%)" },

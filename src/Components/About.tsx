@@ -1,11 +1,12 @@
 import mads from "../assets/mads.jpg";
 import { motion } from "framer-motion";
 import {
-  projectsAnimation,
-  aboutAnimations,
-  fadeOutFromX,
+  fadeOutOriginX,
   fadeOut,
   oddEvenTranslate,
+  widthScale,
+  fadeOutX,
+  fadeOutY,
 } from "../utils/animations";
 import { techGallery } from "../assets/techs/index";
 
@@ -14,42 +15,62 @@ const About = () => {
     <section id="about" className="mt-20">
       <div className="flex items-center">
         <motion.h4
-          variants={projectsAnimation.titleHeader}
+          variants={fadeOutX}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
+          custom={-70}
+          viewport={{ once: true }}
           className="text-primary text-1xl font-light tracking-wide"
         >
           ABOUT
         </motion.h4>
         <motion.hr
-          variants={projectsAnimation.sectionHeader}
+          variants={widthScale}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
+          viewport={{ once: true }}
           className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500"
         />
       </div>
-      <section className="flex mt-12 ml-11 max-lg:flex-wrap max-lg:gap-10 max-md:ml-0">
+      <section className="flex mt-12 ml-11 max-biggerLg:flex-wrap max-lg:gap-10 max-md:ml-0">
         <motion.p
-          variants={aboutAnimations.sectionText}
-          custom={0}
+          variants={fadeOutY}
           initial="initial"
-          animate="animate"
-          className="text-words-100 text-lg font-light tracking-wide w-4/6 mr-15 max-md:w-full max-md:m-0 "
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 1.2,
+              duration: 1.3,
+              ease: [0.9, 0.1, 0.3, 0.96],
+            },
+          }}
+          viewport={{ once: true }}
+          custom={50}
+          className="text-words-100 text-lg font-light tracking-wide w-4/6 mr-15 max-md:m-0 max-biggerLg:w-full"
         >
           Get a brief look at who I am and what I do. If you would like to know
           more about me and my interests, you can.
         </motion.p>
         <motion.a
-          variants={aboutAnimations.sectionText}
-          custom={0}
+          variants={fadeOutY}
           initial="initial"
-          animate="animate"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 1.2,
+              duration: 1.3,
+              ease: [0.9, 0.1, 0.3, 0.96],
+            },
+          }}
+          custom={50}
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/dvnkx"
-          className="flex items-center ml-10 max-md:ml-0 max-md:mt-10"
+          className="flex items-center ml-10 max-biggerLg:ml-0 max-biggerLg:mt-10 max-biggerLg:w-full"
         >
-          <h2 className="text-words-100  tracking-wide text-3xl font-light peer">
+          <h2 className="text-words-100 tracking-wide text-3xl font-light peer">
             More about me
           </h2>
           <svg
@@ -66,40 +87,95 @@ const About = () => {
             />
           </svg>
         </motion.a>
-        <motion.img
-          variants={fadeOut}
-          initial="initial"
-          animate="animate"
-          className="hidden max-lg:block max-md:mt-10 mr-auto"
-          src={mads}
-        />
+        <div className="relative w-[300px] h-[300px] lg:hidden">
+          <motion.div
+            variants={fadeOutOriginX}
+            initial="initial"
+            whileInView={{
+              scaleX: 1,
+              originX: [0, 0, 0, 0, 0, 0, 0.5],
+              opacity: 1,
+              transition: {
+                delay: 1.9,
+                duration: 1.6,
+                ease: [0.9, 0.1, 0.3, 0.96],
+              },
+            }}
+            viewport={{ once: true }}
+            custom={1}
+            className="w-full h-full absolute bg-white lg:hidden max-md:top-10"
+          />
+          <motion.img
+            variants={fadeOut}
+            initial="initial"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 2.9,
+                duration: 1,
+                ease: [0.9, 0.1, 0.3, 0.96],
+              },
+            }}
+            viewport={{ once: true }}
+            className="absolute hidden max-lg:block max-md:mt-10 mr-auto w-full h-full z-10"
+            src={mads}
+          />
+        </div>
       </section>
       <section className="relative flex mt-12 ml-11 justify-between max-md:ml-0">
         <div className="w-3/6 max-lg:w-full">
           <motion.h4
-            variants={projectsAnimation.titleHeader}
+            variants={fadeOutX}
             initial="initial"
-            animate="animate"
-            custom={1}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 1.7,
+                duration: 1.3,
+                ease: [0.9, 0.1, 0.3, 0.96],
+              },
+            }}
+            custom={-400}
+            viewport={{ once: true }}
             className="text-primary text-1xl font-light tracking-wide"
           >
             WHO AM I
           </motion.h4>
           <motion.p
-            variants={aboutAnimations.sectionText}
-            custom={0.3}
+            variants={fadeOutY}
+            custom={100}
             initial="initial"
-            animate="animate"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 2.1,
+                duration: 1.3,
+                ease: [0.9, 0.1, 0.3, 0.96],
+              },
+            }}
+            viewport={{ once: true }}
             className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
           >
             My name is Bogdan Lisniak. I am 21 years old, I live in Kyiv,
             Ukraine, and I&apos;m a self-taught Frontend Developer.
           </motion.p>
           <motion.p
-            variants={aboutAnimations.sectionText}
-            custom={0.5}
+            variants={fadeOutY}
+            custom={100}
             initial="initial"
-            animate="animate"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 2.4,
+                duration: 1.3,
+                ease: [0.9, 0.1, 0.3, 0.96],
+              },
+            }}
+            viewport={{ once: true }}
             className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
           >
             I've always been interested in how a virtual environment works under
@@ -107,20 +183,38 @@ const About = () => {
             beautiful UI with awesome user experiences.
           </motion.p>
           <motion.p
-            variants={aboutAnimations.sectionText}
-            custom={0.7}
+            variants={fadeOutY}
+            custom={100}
             initial="initial"
-            animate="animate"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 2.7,
+                duration: 1.3,
+                ease: [0.9, 0.1, 0.3, 0.96],
+              },
+            }}
+            viewport={{ once: true }}
             className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
           >
             I enjoy the constant change in the technologies used in the area and
             love diving into new frameworks and technologies.
           </motion.p>
           <motion.p
-            variants={aboutAnimations.sectionText}
-            custom={0.9}
+            variants={fadeOutY}
+            custom={100}
             initial="initial"
-            animate="animate"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 3,
+                duration: 1.3,
+                ease: [0.9, 0.1, 0.3, 0.96],
+              },
+            }}
+            viewport={{ once: true }}
             className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
           >
             Spending time customizing, improving and tinkering with my work
@@ -130,27 +224,54 @@ const About = () => {
           </motion.p>
         </div>
         <motion.div
-          variants={fadeOutFromX}
+          variants={fadeOutOriginX}
           initial="initial"
-          animate="animate"
+          whileInView={{
+            scaleX: 1,
+            originX: [0, 0, 0, 0, 0, 0, 0.5],
+            opacity: 1,
+            transition: {
+              delay: 1.9,
+              duration: 1.6,
+              ease: [0.9, 0.1, 0.3, 0.96],
+            },
+          }}
+          viewport={{ once: true }}
           custom={1}
-          className="w-[300px] h-[300px] absolute bg-white right-0"
+          className="w-[300px] h-[300px] absolute bg-white right-0 max-lg:hidden"
         />
         <motion.img
           variants={fadeOut}
           custom={1.6}
           initial="initial"
-          animate="animate"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 2.9,
+              duration: 1,
+              ease: [0.9, 0.1, 0.3, 0.96],
+            },
+          }}
+          viewport={{ once: true }}
           className="w-[300px] h-[300px] max-lg:hidden z-10"
           src={mads}
         />
       </section>
       <section className="mt-12 ml-11 max-md:ml-0 ">
         <motion.h4
-          variants={projectsAnimation.titleHeader}
+          variants={fadeOutX}
           initial="initial"
-          animate="animate"
-          custom={1.7}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 3.1,
+              duration: 1.3,
+              ease: [0.9, 0.1, 0.3, 0.96],
+            },
+          }}
+          custom={-400}
           className="text-primary text-1xl font-light tracking-wide"
         >
           TECH I ENJOY
@@ -160,9 +281,11 @@ const About = () => {
             <motion.img
               src={icon}
               variants={oddEvenTranslate}
+              key={i}
               custom={i}
               initial="initial"
-              animate="animate"
+              whileInView="animate"
+              viewport={{ once: true }}
               className="w-[40px] h-[40px]  fill-secondary-300 "
             />
           ))}

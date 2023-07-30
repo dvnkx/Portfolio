@@ -1,6 +1,6 @@
 import { WDev } from ".";
 import { motion } from "framer-motion";
-import { introAnimation } from "../utils/animations";
+import { fadeOut, fadeOutX, fadeOutY } from "../utils/animations";
 import { Link } from "react-scroll";
 
 const Introduction = () => {
@@ -11,26 +11,48 @@ const Introduction = () => {
     >
       <div className="w-2/3 max-biggerLg:w-full">
         <motion.h1
-          variants={introAnimation.title}
+          variants={fadeOutX}
+          custom={-200}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
+          viewport={{ once: true }}
           className="text-secondary-100 font-medium text-7xl tracking-wide dark:text-words-200 max-biggerLg:text-5xl"
         >
           I invent and develop applications.
         </motion.h1>
         <motion.p
-          variants={introAnimation.subtitle}
+          variants={fadeOutY}
           initial="initial"
-          animate="animate"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 0.5,
+              duration: 1.2,
+              ease: [0.9, 0.1, 0.3, 0.96],
+            },
+          }}
+          custom={375}
+          viewport={{ once: true }}
           className="text-words-100 font-light tracking-wide text-lg mt-10"
         >
           I&apos;m a frontend developer with a passion for great design and user
           experiences.
         </motion.p>
         <motion.div
-          variants={introAnimation.toProjects}
+          variants={fadeOutX}
+          custom={100 + "%"}
           initial="initial"
-          animate="animate"
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 2.7,
+              duration: 1.2,
+              ease: [0.9, 0.1, 0.3, 0.96],
+            },
+          }}
+          viewport={{ once: true }}
           className="flex items-center cursor-pointer mt-23 max-biggerLg:mt-15 w-full max-md:mt-10"
         >
           <Link
@@ -57,9 +79,17 @@ const Introduction = () => {
         </motion.div>
       </div>
       <motion.div
-        variants={introAnimation.workplace}
+        variants={fadeOut}
         initial="initial"
-        animate="animate"
+        whileInView={{
+          opacity: 1,
+          transition: {
+            delay: 1.7,
+            duration: 0.7,
+            ease: [0.9, 0.1, 0.3, 0.96],
+          },
+        }}
+        viewport={{ once: true }}
         className="max-biggerLg:absolute max-biggerLg:bottom-0 max-biggerLg:left-30 max-biggerLg:w-3/4 max-md:left-5 max-md:bottom-0 max-md:w-full"
       >
         <WDev />

@@ -3,7 +3,7 @@ import Chateo from "../assets/Chateo.svg";
 import LaceStore from "../assets/Lace-store.svg";
 import Portfolio from "../assets/Portfolio.svg";
 import { motion } from "framer-motion";
-import { projectsAnimation } from "../utils/animations";
+import { fadeOutX, fadeOutY, widthScale } from "../utils/animations";
 import { Link } from "react-scroll";
 
 const projects = [
@@ -12,18 +12,21 @@ const projects = [
     name: "Chateo",
     description: "Chat App",
     link: "https://github.com/dvnkx/Chateo",
+    color: "#dcecfe",
   },
   {
     img: Portfolio,
     name: "Portfolio",
     description: "Current Project",
     link: "https://github.com/dvnkx/Portfolio",
+    color: "#484a4c",
   },
   {
     img: LaceStore,
     name: "Lace Store",
     description: "Sneaker Store",
     link: "https://github.com/dvnkx/Lace-Store",
+    color: "#262626",
   },
 ];
 
@@ -32,33 +35,56 @@ const Projects = () => {
     <section id="projects" className="mt-20">
       <div className="flex items-center">
         <motion.h4
-          variants={projectsAnimation.titleHeader}
+          variants={fadeOutX}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
+          custom={-70}
+          viewport={{ once: true }}
           className="text-primary text-1xl font-light tracking-wide"
         >
           PROJECTS
         </motion.h4>
         <motion.hr
-          variants={projectsAnimation.sectionHeader}
+          variants={widthScale}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
+          viewport={{ once: true }}
           className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500"
         />
       </div>
       <motion.p
-        variants={projectsAnimation.textAppearance}
+        variants={fadeOutY}
         initial="initial"
-        animate="animate"
-        className="text-words-100 text-2xl font-light tracking-wide w-4/5 mt-12 ml-11 max-md:ml-0"
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: 1.2,
+            duration: 1.3,
+            ease: [0.9, 0.1, 0.3, 0.96],
+          },
+        }}
+        custom={200}
+        viewport={{ once: true }}
+        className="text-words-100 text-2xl font-light tracking-wide w-full mt-12 ml-11 max-md:ml-0"
       >
         Check out a few of the main projects I have worked on. They can
         introduce to you my current skills.
       </motion.p>
       <motion.div
-        variants={projectsAnimation.toProjects}
+        variants={fadeOutY}
+        custom={25}
         initial="initial"
-        animate="animate"
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: 2.6,
+            duration: 0.8,
+            ease: [0.9, 0.1, 0.3, 0.96],
+          },
+        }}
+        viewport={{ once: true }}
         className="flex mt-12 ml-11 max-md:ml-0 items-center text-3xl text-words-100 tracking-wide font-light"
       >
         <Link
@@ -98,6 +124,7 @@ const Projects = () => {
               name={project.name}
               description={project.description}
               link={project.link}
+              color={project.color}
             />
           );
         })}

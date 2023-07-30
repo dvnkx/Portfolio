@@ -2,7 +2,7 @@ import logo_dark from "../assets/logo-dark.svg";
 import logo_light from "../assets/logo-light.svg";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { navBarAnimation } from "../utils/animations";
+import { fadeOut } from "../utils/animations";
 import { Link } from "react-scroll";
 
 function NavBar() {
@@ -88,9 +88,16 @@ function NavBar() {
 
   return (
     <motion.header
-      variants={navBarAnimation}
+      variants={fadeOut}
       initial="initial"
-      animate="animate"
+      animate={{
+        opacity: 1,
+        transition: {
+          delay: 2.3,
+          duration: 0.8,
+          easy: [0.9, 0.1, 0.3, 0.96],
+        },
+      }}
       className="fixed top-0 left-0 bg-transparent z-40 w-full flex h-32 justify-between py-5 px-15 max-md:px-5 max-lg:px-10 max-md:overflow-visible"
     >
       <div
@@ -142,9 +149,9 @@ function NavBar() {
         className="flex max-md:absolute max-md:top-0 max-md:right-0 max-md:h-[100vh] max-md:w-0 max-md:bg-secondary-500 max-md:dark:bg-secondary-200 duration-500 easy-out transition-all"
       >
         <ul className="flex justify-center items-center gap-x-16 text-words-100 text-lg max-md:flex-col max-md:m-10 max-md:text-3xl max-md:gap-6 max-md:items-start max-md:transition-all ">
-          {links.map((link) => {
+          {links.map((link, i) => {
             return (
-              <li>
+              <li key={i}>
                 <Link
                   className="relative cursor-pointer hover:text-secondary-200 dark:hover:text-words-200 before:content-[''] before:w-[0%] before:h-px before:bg-words-100 before:absolute before:transition-all before:top-[27px] hover:before:w-[100%] max-md:before:h-[2px] max-md:before:top-[39px]"
                   to={link.href}

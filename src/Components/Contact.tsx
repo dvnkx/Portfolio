@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Input, Toast } from "./index";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { fadeOutY, projectsAnimation } from "../utils/animations";
+import { fadeOutX, fadeOutY, widthScale } from "../utils/animations";
 
 export interface IToast {
   showToast: () => void;
@@ -57,17 +57,20 @@ const Contact = () => {
       )}
       <div className="flex items-center">
         <motion.h4
-          variants={projectsAnimation.titleHeader}
+          variants={fadeOutX}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
+          custom={-70}
+          viewport={{ once: true }}
           className="text-primary text-1xl font-light tracking-wide"
         >
           CONTACT
         </motion.h4>
         <motion.hr
-          variants={projectsAnimation.sectionHeader}
+          variants={widthScale}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
+          viewport={{ once: true }}
           className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500"
         />
       </div>
@@ -76,8 +79,17 @@ const Contact = () => {
           <motion.p
             variants={fadeOutY}
             initial="initial"
-            animate="animate"
-            custom={1.4}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 1.2,
+                duration: 1.3,
+                ease: [0.9, 0.1, 0.3, 0.96],
+              },
+            }}
+            viewport={{ once: true }}
+            custom={100}
             className="text-words-100 text-lg font-light tracking-wide ml-15 max-lg:m-0 max-lg:mb-10"
           >
             Do not hesitate to contact me through the form here or by direct
@@ -110,27 +122,54 @@ const Contact = () => {
             <motion.label
               variants={fadeOutY}
               initial="initial"
-              animate="animate"
-              custom={1}
-              className="bg-gradient-to-r from-neutral-500 via-violet-600 to-indigo-500 bg-clip-text text-transparent  font-light tracking-wide text-3xl"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 2.8,
+                  duration: 1.3,
+                  ease: [0.9, 0.1, 0.3, 0.96],
+                },
+              }}
+              viewport={{ once: true }}
+              custom={70}
+              className="bg-gradient-to-r from-neutral-500 via-violet-600 to-indigo-500 bg-clip-text text-transparent font-light tracking-wide text-3xl after:content[' '] transition-all after:absolute after:-bottom-2.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-primary after:transition-transform after:duration-300"
             >
               What&apos;s your message? *
             </motion.label>
             <motion.textarea
               variants={fadeOutY}
               initial="initial"
-              animate="animate"
-              custom={1.5}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 3.2,
+                  duration: 1.3,
+                  ease: [0.9, 0.1, 0.3, 0.96],
+                },
+              }}
+              viewport={{ once: true }}
+              custom={70}
               name="message"
-              className="mt-10 bg-transparent w-full outline-none text-words-100 border-b border-words-100 focus:border-primary text-lg"
+              className="peer mt-10 bg-transparent w-full outline-none text-words-100 border-b border-words-100 focus:border-primary text-lg"
               placeholder="Hi Bogdan, let's work!"
             ></motion.textarea>
           </div>
           <motion.button
             variants={fadeOutY}
             initial="initial"
-            animate="animate"
-            custom={1.5}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 3.5,
+                duration: 1.3,
+                ease: [0.9, 0.1, 0.3, 0.96],
+              },
+            }}
+            viewport={{ once: true }}
+            custom={100}
             type="submit"
             className="flex items-center text-words-100 pb-10 dark:hover:text-words-200 hover:text-secondary-200 active:scale-105 active:ease active:duration-300 peer"
           >
