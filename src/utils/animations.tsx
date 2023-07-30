@@ -30,6 +30,21 @@ export const fadeOutFromX = {
   }),
 };
 
+export const oddEvenTranslate = {
+  initial: (index: number) => ({
+    opacity: 0,
+    translateY: index % 2 ? 100 : -100,
+  }),
+  animate: (index: number) => ({
+    opacity: 1,
+    translateY: 0,
+    transition: {
+      duration: 0.8,
+      delay: 2.5 + index * 0.3,
+    },
+  }),
+};
+
 export const navBarAnimation = {
   initial: {
     opacity: 0,
