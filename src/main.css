@@ -4,8 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.display-none {
-  @apply hidden;
+@layer base {
+  body {
+    @apply dark:bg-secondary-100 bg-secondary-400;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  margin-block: 0.1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(99, 102, 241);
+  background: linear-gradient(
+    190deg,
+    rgba(99, 102, 241, 1) 0%,
+    rgba(106, 106, 106, 1) 100%
+  );
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(99, 102, 241);
 }
 
 input:-webkit-autofill,

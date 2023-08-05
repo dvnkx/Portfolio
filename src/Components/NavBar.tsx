@@ -55,7 +55,7 @@ function NavBar() {
         let height = sec.offsetHeight;
         let id = sec.getAttribute("id");
 
-        if (top >= offset && top < offset + height) {
+        if (top + -100 >= offset && top < offset + height) {
           navLinks.forEach((links) => {
             links.classList.remove("before:w-[100%]");
             document
@@ -153,7 +153,8 @@ function NavBar() {
             return (
               <li key={i}>
                 <Link
-                  className="relative cursor-pointer hover:text-secondary-200 dark:hover:text-words-200 before:content-[''] before:w-[0%] before:h-px before:bg-words-100 before:absolute before:transition-all before:top-[27px] hover:before:w-[100%] max-md:before:h-[2px] max-md:before:top-[39px]"
+                  href={link.href}
+                  className="relative cursor-pointer hover:text-secondary-200 dark:hover:text-words-200 before:content-[''] before:w-[0%] before:h-px before:bg-secondary-100 dark:before:bg-secondary-400 before:absolute before:transition-all before:top-[27px] hover:before:w-[100%] max-md:before:h-[2px] max-md:before:top-[39px]"
                   to={link.href}
                   smooth
                   offset={50}

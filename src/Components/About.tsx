@@ -1,4 +1,4 @@
-import mads from "../assets/mads.jpg";
+import bog_li from "../assets/bog-li.jpg";
 import { motion } from "framer-motion";
 import {
   fadeOutOriginX,
@@ -32,7 +32,7 @@ const About = () => {
           className="ml-4 w-full h-px border-0 bg-gradient-to-l from-indigo-500"
         />
       </div>
-      <section className="flex mt-12 ml-11 max-biggerLg:flex-wrap max-lg:gap-10 max-md:ml-0">
+      <div className="flex mt-12 ml-11 max-biggerLg:flex-wrap max-lg:gap-10 max-md:ml-0">
         <motion.p
           variants={fadeOutY}
           initial="initial"
@@ -64,6 +64,7 @@ const About = () => {
               ease: [0.9, 0.1, 0.3, 0.96],
             },
           }}
+          viewport={{ once: true }}
           custom={50}
           target="_blank"
           rel="noopener noreferrer"
@@ -119,11 +120,11 @@ const About = () => {
             }}
             viewport={{ once: true }}
             className="absolute hidden max-lg:block max-md:mt-10 mr-auto w-full h-full z-10"
-            src={mads}
+            src={bog_li}
           />
         </div>
-      </section>
-      <section className="relative flex mt-12 ml-11 justify-between max-md:ml-0">
+      </div>
+      <div className="relative flex mt-12 ml-11 justify-between max-md:ml-0">
         <div className="w-3/6 max-lg:w-full">
           <motion.h4
             variants={fadeOutX}
@@ -255,10 +256,10 @@ const About = () => {
           }}
           viewport={{ once: true }}
           className="w-[300px] h-[300px] max-lg:hidden z-10"
-          src={mads}
+          src={bog_li}
         />
-      </section>
-      <section className="mt-12 ml-11 max-md:ml-0 ">
+      </div>
+      <div className="mt-12 ml-11 max-md:ml-0 ">
         <motion.h4
           variants={fadeOutX}
           initial="initial"
@@ -290,7 +291,7 @@ const About = () => {
             />
           ))}
         </div>
-      </section>
+      </div>
     </section>
   );
 };

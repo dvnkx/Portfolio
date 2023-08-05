@@ -66,7 +66,7 @@ const Projects = () => {
         }}
         custom={200}
         viewport={{ once: true }}
-        className="text-words-100 text-2xl font-light tracking-wide w-full mt-12 ml-11 max-md:ml-0"
+        className="text-words-100 text-2xl font-light tracking-wide  w-full mt-12 ml-11 max-md:ml-0"
       >
         Check out a few of the main projects I have worked on. They can
         introduce to you my current skills.
