@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative mt-20">
+    <section id="contact" className="relative my-20 ">
       {toastType === "green" ? (
         <Toast
           message="Message has been sended!"

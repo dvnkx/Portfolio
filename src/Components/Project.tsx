@@ -73,7 +73,7 @@ const Project = ({
         }}
         custom={100}
         viewport={{ once: true }}
-        className="mt-4 text-secondary-300 dark:text-words-100"
+        className="mt-4 text-secondary-300 font-light text-sm  dark:text-secondary-200"
       >
         {description}
       </motion.h3>
@@ -91,7 +91,7 @@ const Project = ({
         }}
         custom={100}
         viewport={{ once: true }}
-        className=" text-primary dark:text-words-200  text-3xl tracking-wide mt-1"
+        className=" text-primary dark:text-words-100  text-3xl tracking-wide mt-1"
       >
         {name}
       </motion.h1>

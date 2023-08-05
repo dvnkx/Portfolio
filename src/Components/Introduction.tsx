@@ -16,7 +16,7 @@ const Introduction = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="text-secondary-100 font-medium text-7xl tracking-wide dark:text-words-200 max-biggerLg:text-5xl"
+          className="text-secondary-100 text-7xl tracking-wide dark:text-words-200 max-biggerLg:text-5xl"
         >
           I invent and develop applications.
         </motion.h1>
@@ -41,7 +41,7 @@ const Introduction = () => {
         </motion.p>
         <motion.div
           variants={fadeOutX}
-          custom={100 + "%"}
+          custom={200}
           initial="initial"
           whileInView={{
             opacity: 1,
