@@ -1,4 +1,4 @@
-import { WDev } from ".";
+import { LDev } from ".";
 import { motion } from "framer-motion";
 import { fadeOut, fadeOutX, fadeOutY } from "../utils/animations";
 import { Link } from "react-scroll";
@@ -92,7 +92,7 @@ const Introduction = () => {
         viewport={{ once: true }}
         className="max-biggerLg:absolute max-biggerLg:bottom-0 max-biggerLg:left-30 max-biggerLg:w-3/4 max-md:left-5 max-md:bottom-0 max-md:w-full"
       >
-        <WDev />
+        <LDev />
       </motion.div>
     </section>
   );

@@ -1,7 +1,7 @@
 import { useLottie } from "lottie-react";
 import dev from "../../assets/widgets/dev.json";
 
-const Widget = () => {
+const LDev = () => {
   const options = {
     animationData: dev,
     loop: true,
@@ -12,4 +12,4 @@ const Widget = () => {
   return <>{View}</>;
 };
 
-export default Widget;
+export default LDev;
