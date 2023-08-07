@@ -2,12 +2,9 @@
 
 ## It's:
 
-![logo](https://github.com/dvnkx/lisniakbogdan/assets/104072047/2eead740-d712-4fd6-872d-18c1f593edd0)
-
-
-> 👨🏻‍💻 Portfolio;
-> 💪🏻 Introduction of my skills;
-> 📲 Way to communicate with me.
+- 👨🏻‍💻 Portfolio;
+- 💪🏻 Introduction of my skills;
+- 📲 Way to communicate with me.
 
 ###
 
