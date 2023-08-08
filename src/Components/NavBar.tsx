@@ -1,11 +1,11 @@
-import logo_dark from "../assets/logo-dark.svg";
-import logo_light from "../assets/logo-light.svg";
+import logo_dark from "../../public/assets/logo-dark.svg";
+import logo_light from "../../public/assets/logo-light.svg";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { fadeOut } from "../utils/animations";
 import { Link } from "react-scroll";
 
-function NavBar() {
+export const NavBar = () => {
   const currentTheme = localStorage.getItem("theme");
   const [theme, setTheme] = useState<string>(
     currentTheme ? currentTheme : "dark"
@@ -55,7 +55,7 @@ function NavBar() {
         let height = sec.offsetHeight;
         let id = sec.getAttribute("id");
 
-        if (top + -100 >= offset && top < offset + height) {
+        if (top + 50 >= offset && top < offset + height) {
           navLinks.forEach((links) => {
             links.classList.remove("before:w-[100%]");
             document
@@ -203,6 +203,4 @@ function NavBar() {
       </nav>
     </motion.header>
   );
-}
-
-export default NavBar;
+};

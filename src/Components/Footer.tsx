@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeOutY } from "../utils/animations";
 
-const Footer = () => {
+export const Footer = () => {
   const links = [
     { href: "https://github.com/dvnkx", title: "GitHub" },
     {
@@ -9,6 +9,7 @@ const Footer = () => {
       title: " LinkedIn",
     },
     { href: "https://djinni.co/q/413f1d5caf/", title: "Djinni" },
+    { href: "https://t.me/dvnkxxxx", title: "Telegram" },
   ];
 
   return (
@@ -48,5 +49,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

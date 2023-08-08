@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Input, Toast } from "./index";
+import { Input, Toast } from "./views/index";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { fadeOutX, fadeOutY, widthScale } from "../utils/animations";
@@ -8,7 +8,7 @@ export interface IToast {
   showToast: () => void;
 }
 
-const Contact = () => {
+export const Contact = () => {
   const formRef = useRef<HTMLFormElement | any>("");
   const toastRef = useRef<IToast>(null);
   const [toastType, setToastType] = useState<string>("");
@@ -194,5 +194,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;

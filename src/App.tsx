@@ -5,7 +5,7 @@ import {
   Introduction,
   NavBar,
   Projects,
-} from "./Components/index";
+} from "./components/index";
 
 function App() {
   return (

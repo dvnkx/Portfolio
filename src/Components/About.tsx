@@ -1,4 +1,4 @@
-import bog_li from "../assets/bog-li.jpg";
+import bog_li from "../../public/assets/bog-li.jpg";
 import { motion } from "framer-motion";
 import {
   fadeOutOriginX,
@@ -8,9 +8,9 @@ import {
   fadeOutX,
   fadeOutY,
 } from "../utils/animations";
-import { techGallery } from "../assets/techs/index";
+import { techGallery } from "../../public/assets/techs/index";
 
-const About = () => {
+export const About = () => {
   return (
     <section id="about" className="mt-20">
       <div className="flex items-center">
@@ -295,5 +295,3 @@ const About = () => {
     </section>
   );
 };
-
-export default About;

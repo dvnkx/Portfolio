@@ -1,5 +1,5 @@
 import React, { useState, useImperativeHandle, forwardRef } from "react";
-import { IToast } from "./Contact";
+import { IToast } from "../Contact";
 
 interface IToastProps {
   color: string;

@@ -1,5 +1,5 @@
 import { useLottie } from "lottie-react";
-import dev from "../../assets/widgets/dev.json";
+import dev from "../../../public/assets/widgets/dev.json";
 
 const LDev = () => {
   const options = {

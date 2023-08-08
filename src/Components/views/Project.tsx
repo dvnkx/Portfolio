@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeOut, fadeOutOriginX, fadeOutY } from "../utils/animations";
+import { fadeOut, fadeOutOriginX, fadeOutY } from "../../utils/animations";
 
 interface IProjProps {
   img: string;
@@ -10,7 +10,7 @@ interface IProjProps {
   color: string;
 }
 
-const Project = ({
+export const Project = ({
   img,
   name,
   description,
@@ -98,5 +98,3 @@ const Project = ({
     </a>
   );
 };
-
-export default Project;

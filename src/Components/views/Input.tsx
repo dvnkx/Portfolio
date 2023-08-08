@@ -1,12 +1,12 @@
 import { HTMLMotionProps, motion } from "framer-motion";
-import { fadeOutY } from "../utils/animations";
+import { fadeOutY } from "../../utils/animations";
 
 interface IInputProps extends HTMLMotionProps<"input"> {
   label: string;
   index: number;
 }
 
-const Input = ({ label, index, ...props }: IInputProps) => {
+export const Input = ({ label, index, ...props }: IInputProps) => {
   return (
     <div className="relative h-12 w-full mb-12">
       <motion.input
@@ -47,5 +47,3 @@ const Input = ({ label, index, ...props }: IInputProps) => {
     </div>
   );
 };
-
-export default Input;

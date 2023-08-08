@@ -1,9 +1,9 @@
-import { LDev } from ".";
+import LDev from "./lottie/LDev";
 import { motion } from "framer-motion";
 import { fadeOut, fadeOutX, fadeOutY } from "../utils/animations";
 import { Link } from "react-scroll";
 
-const Introduction = () => {
+export const Introduction = () => {
   return (
     <section
       id="intro"
@@ -97,5 +97,3 @@ const Introduction = () => {
     </section>
   );
 };
-
-export default Introduction;

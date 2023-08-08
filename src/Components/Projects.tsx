@@ -1,28 +1,28 @@
-import { Project } from ".";
-import Chateo from "../assets/Chateo.svg";
-import LaceStore from "../assets/Lace-store.svg";
-import Portfolio from "../assets/Portfolio.svg";
+import { Project } from "./views/index";
+import chateo from "../../public/assets/chateo.svg";
+import lace_store from "../../public/assets/Lace-store.svg";
+import portfolio from "../../public/assets/Portfolio.svg";
 import { motion } from "framer-motion";
 import { fadeOutX, fadeOutY, widthScale } from "../utils/animations";
 import { Link } from "react-scroll";
 
 const projects = [
   {
-    img: Chateo,
+    img: chateo,
     name: "Chateo",
     description: "Chat App",
     link: "https://github.com/dvnkx/Chateo",
     color: "#dcecfe",
   },
   {
-    img: Portfolio,
+    img: portfolio,
     name: "Portfolio",
     description: "Current Project",
     link: "https://github.com/dvnkx/Portfolio",
     color: "#484a4c",
   },
   {
-    img: LaceStore,
+    img: lace_store,
     name: "Lace Store",
     description: "Sneaker Store",
     link: "https://github.com/dvnkx/Lace-Store",
@@ -30,7 +30,7 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+export const Projects = () => {
   return (
     <section id="projects" className="mt-20">
       <div className="flex items-center">
@@ -132,5 +132,3 @@ const Projects = () => {
     </section>
   );
 };
-
-export default Projects;
