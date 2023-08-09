@@ -1,11 +1,6 @@
 import React, { useState, useImperativeHandle, forwardRef } from "react";
 import { IToast } from "../Contact";
 
-interface IToastProps {
-  color: string;
-  message: string;
-}
-
 const Toast = ({ color, message }: IToastProps, ref: React.Ref<IToast>) => {
   const [show, setShow] = useState(false);
 
@@ -65,5 +60,10 @@ const Toast = ({ color, message }: IToastProps, ref: React.Ref<IToast>) => {
     </div>
   );
 };
+
+interface IToastProps {
+  color: string;
+  message: string;
+}
 
 export default forwardRef(Toast);

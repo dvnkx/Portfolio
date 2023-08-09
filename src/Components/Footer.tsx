@@ -1,17 +1,8 @@
 import { motion } from "framer-motion";
 import { fadeOutY } from "../utils/animations";
+import { footerLinks } from "../../data/links";
 
 export const Footer = () => {
-  const links = [
-    { href: "https://github.com/dvnkx", title: "GitHub" },
-    {
-      href: "https://www.linkedin.com/in/bohdan-lisniak-02288526a/",
-      title: " LinkedIn",
-    },
-    { href: "https://djinni.co/q/413f1d5caf/", title: "Djinni" },
-    { href: "https://t.me/dvnkxxxx", title: "Telegram" },
-  ];
-
   return (
     <footer className="container flex flex-col justify-center gap-10 py-16 md:flex-row md:justify-between text-words-100">
       <motion.section
@@ -22,7 +13,7 @@ export const Footer = () => {
         custom={50}
         className="flex w-1/2 gap-8 md:gap-12 text-xl [&>*]:cursor-pointer"
       >
-        {links.map((link, i) => {
+        {footerLinks.map((link, i) => {
           return (
             <a
               key={i}

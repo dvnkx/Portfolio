@@ -1,4 +1,3 @@
-export * from "./NavBar";
 export * from "./Introduction";
 export * from "./Projects";
 export * from "./views/Project";

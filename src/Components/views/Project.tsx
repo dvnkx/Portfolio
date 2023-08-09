@@ -1,15 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeOut, fadeOutOriginX, fadeOutY } from "../../utils/animations";
 
-interface IProjProps {
-  img: string;
-  name: string;
-  description: string;
-  link: string;
-  index: number;
-  color: string;
-}
-
 export const Project = ({
   img,
   name,
@@ -98,3 +89,12 @@ export const Project = ({
     </a>
   );
 };
+
+interface IProjProps {
+  img: string;
+  name: string;
+  description: string;
+  link: string;
+  index: number;
+  color: string;
+}

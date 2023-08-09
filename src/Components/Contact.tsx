@@ -4,10 +4,6 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { fadeOutX, fadeOutY, widthScale } from "../utils/animations";
 
-export interface IToast {
-  showToast: () => void;
-}
-
 export const Contact = () => {
   const formRef = useRef<HTMLFormElement | any>("");
   const toastRef = useRef<IToast>(null);
@@ -194,3 +190,7 @@ export const Contact = () => {
     </section>
   );
 };
+
+export interface IToast {
+  showToast: () => void;
+}
