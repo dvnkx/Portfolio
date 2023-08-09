@@ -1,7 +1,7 @@
 import { Project } from "./views/index";
 import chateo from "../../public/assets/chateo.svg";
-import lace_store from "../../public/assets/Lace-store.svg";
-import portfolio from "../../public/assets/Portfolio.svg";
+import lace_store from "../../public/assets/lace-store.svg";
+import portfolio from "../../public/assets/portfolio.svg";
 import { motion } from "framer-motion";
 import { fadeOutX, fadeOutY, widthScale } from "../utils/animations";
 import { Link } from "react-scroll";
