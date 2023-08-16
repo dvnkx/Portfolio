@@ -1125,6 +1125,10 @@ body{
   padding-top: 18rem;
 }
 
+.font-body{
+  font-family: Epilogue;
+}
+
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1159,6 +1163,18 @@ body{
   font-weight: 300;
 }
 
+.font-semibold{
+  font-weight: 600;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
 .leading-tight{
   line-height: 1.25;
 }
@@ -1189,6 +1205,16 @@ body{
 .text-words-100{
   --tw-text-opacity: 1;
   color: rgb(181 181 181 / var(--tw-text-opacity));
+}
+
+.text-secondary-200{
+  --tw-text-opacity: 1;
+  color: rgb(73 75 81 / var(--tw-text-opacity));
+}
+
+.text-secondary-100{
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
 }
 
 .outline-none{
@@ -1513,6 +1539,11 @@ select:-webkit-autofill:focus {
 :is(.dark .dark\:text-words-100){
   --tw-text-opacity: 1;
   color: rgb(181 181 181 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:text-secondary-400){
+  --tw-text-opacity: 1;
+  color: rgb(237 237 237 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:before\:bg-secondary-400)::before{

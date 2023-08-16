@@ -8,7 +8,7 @@ export const Introduction = () => {
     <section id="intro" className="relative flex pt-72 mb-80">
       <article className="w-3/5 max-xl:w-full">
         <AnimatedLetters
-          className="text-secondary-400 text-7xl mb-10 max-md:text-6xl max-sm:5xl"
+          className="dark:text-secondary-400 text-secondary-200 font-body text-7xl mb-10 max-md:text-6xl max-sm:5xl"
           text={introText.largeText}
         />
         <AnimatedWords
