@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import { navigationLinks } from "../../../data/links";
+import { navigationLinks } from "../../../data/index";
 import { linkVariants, navVariants } from "./index";
 import { DropDownToggleButton, ThemeToggleButton } from "../views/index";
 import logo_dark from "../../../public/assets/logo-dark.svg";
@@ -14,8 +14,6 @@ export const Navigation = () => {
   const [isOpen, toggleOpen] = useState(false);
 
   const navMenu = document.getElementById("dropDown");
-
-  console.log(isOpen);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -76,9 +74,9 @@ export const Navigation = () => {
       <DropDownToggleButton isOpen={isOpen} toggleOpen={toggleOpen} />
       <nav
         id="dropDown"
-        className="flex max-md:absolute max-md:top-0 max-md:right-0 max-md:h-[100vh] max-md:w-0 max-md:bg-secondary-500 max-md:dark:bg-secondary-200 duration-500 easy-out transition-all"
+        className="flex max-md:absolute max-md:top-0 max-md:right-0 max-md:h-[150vh] max-md:w-0  max-md:bg-secondary-500 max-md:dark:bg-secondary-200 duration-500 easy-out transition-all"
       >
-        <ul className="flex justify-center items-center gap-x-16 text-words-100 text-lg max-md:flex-col max-md:m-10 max-md:text-3xl max-md:gap-6 max-md:items-start max-md:transition-all ">
+        <ul className="flex justify-center items-center gap-x-16 text-words-100 text-lg max-md:flex-col max-md:m-10 max-md:justify-start max-md:mt-20  max-md:text-3xl max-md:gap-6 max-md:items-start max-md:transition-all ">
           {navigationLinks.map((link, i) => {
             return (
               <motion.li variants={linkVariants} key={i}>

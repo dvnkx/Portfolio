@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeOutY } from "../utils/animations";
-import { footerLinks } from "../../data/links";
+import { footerLinks } from "../../data/index";
 
 export const Footer = () => {
   return (
