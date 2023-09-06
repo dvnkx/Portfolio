@@ -1,6 +1,6 @@
-import { About, Contact, Footer, Projects } from "./components/index";
+import { About, Contact, Footer } from "./components/index";
 import { Navigation } from "./components/navigation/index";
-import { Introduction } from "./components/templates/index";
+import { Introduction, Projects } from "./components/templates/index";
 
 function App() {
   return (

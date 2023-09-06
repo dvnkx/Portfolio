@@ -12,7 +12,7 @@ import { techGallery } from "../../public/assets/techs/index";
 
 export const About = () => {
   return (
-    <section id="about" className="mt-20">
+    <section id="about" className="mt-2">
       <div className="flex items-center">
         <motion.h4
           variants={fadeOutX}

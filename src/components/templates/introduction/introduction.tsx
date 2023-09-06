@@ -14,7 +14,7 @@ export const Introduction = () => {
         <AnimatedWords
           className="text-secondary-300 text-lg font-light"
           text={introText.text}
-          delay={0.7}
+          delay={0.3}
         />
         <LinkButton
           text="Explore my Projects"

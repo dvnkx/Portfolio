@@ -7,7 +7,7 @@ export const AnimatedLetters: React.FC<IAnimatedTextProps> = ({
   className,
   delay,
 }) => {
-  const letters = Array.from(text);
+  const letters = text.split(" ").map((word) => `${word}\u00A0`);
 
   return (
     <motion.div
@@ -19,7 +19,12 @@ export const AnimatedLetters: React.FC<IAnimatedTextProps> = ({
       custom={delay ? delay : 0}
     >
       {letters.map((letter, i) => (
-        <motion.span variants={textVariants} viewport={{ once: true }} key={i}>
+        <motion.span
+          className="inline-block"
+          variants={textVariants}
+          viewport={{ once: true }}
+          key={i}
+        >
           {letter}
         </motion.span>
       ))}
@@ -32,7 +37,7 @@ export const AnimatedWords: React.FC<IAnimatedTextProps> = ({
   className,
   delay,
 }) => {
-  const words = text.split(" ").map((word) => word + " ");
+  const words = text.split(" ").map((word) => `${word}\u00A0`);
 
   return (
     <motion.div
@@ -44,7 +49,12 @@ export const AnimatedWords: React.FC<IAnimatedTextProps> = ({
       custom={delay ? delay : 0}
     >
       {words.map((word, i) => (
-        <motion.span variants={textVariants} viewport={{ once: true }} key={i}>
+        <motion.span
+          className="inline-block"
+          variants={textVariants}
+          viewport={{ once: true }}
+          key={i}
+        >
           {word}
         </motion.span>
       ))}
@@ -54,6 +64,6 @@ export const AnimatedWords: React.FC<IAnimatedTextProps> = ({
 
 interface IAnimatedTextProps {
   text: string;
-  className: string;
+  className?: string;
   delay?: number;
 }

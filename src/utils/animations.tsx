@@ -85,7 +85,6 @@ export const widthScale = {
     transition: {
       easy: [0.6, 0.01, 0.85, 0.95],
       duration: 1,
-      delay: 1,
     },
   },
 };
