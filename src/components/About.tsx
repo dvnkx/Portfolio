@@ -160,7 +160,7 @@ export const About = () => {
             viewport={{ once: true }}
             className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
           >
-            My name is Bogdan Lisniak. I am 21 years old, I live in Kyiv,
+            My name is Bogdan Lisniak. I am 22 years old, I live in Kyiv,
             Ukraine, and I&apos;m a self-taught Frontend Developer.
           </motion.p>
           <motion.p
