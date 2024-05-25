@@ -11,6 +11,15 @@ const aVariants: Variants = {
   },
 };
 
+interface IProjProps {
+  img: string;
+  name: string;
+  description: string;
+  link: string;
+  index: number;
+  color: string;
+}
+
 export const Project = ({
   img,
   name,
@@ -25,12 +34,12 @@ export const Project = ({
       initial="hidden"
       viewport={{ once: true }}
       whileInView={"visible"}
-      className="flex flex-col cursor-pointer w-[416px] h-[512px]"
+      className="flex flex-col cursor-pointer"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="relative w-[416px] h-[312px] ease-out duration-200 hover:scale-105 ">
+      <div className="relative ">
         <motion.img
           variants={fadeOut}
           initial="initial"
@@ -43,7 +52,7 @@ export const Project = ({
             },
           }}
           viewport={{ once: true }}
-          className="absolute z-10 w-full"
+          className="z-10  ease-out duration-200 hover:scale-105"
           src={img}
         />
         <motion.div
@@ -61,7 +70,7 @@ export const Project = ({
           }}
           viewport={{ once: true }}
           style={{ backgroundColor: color }}
-          className="absolute w-full h-[312px]"
+          className="absolute"
         />
       </div>
       <motion.h3
@@ -78,7 +87,7 @@ export const Project = ({
         }}
         custom={100}
         viewport={{ once: true }}
-        className="mt-4 text-secondary-300 font-light text-sm  dark:text-secondary-200"
+        className="mt-4 text-secondary-300 font-light text-sm dark:text-secondary-200"
       >
         {description}
       </motion.h3>
@@ -96,19 +105,10 @@ export const Project = ({
         }}
         custom={100}
         viewport={{ once: true }}
-        className=" text-primary dark:text-words-100  text-3xl tracking-wide mt-1"
+        className=" text-primary dark:text-words-100 text-3xl tracking-wide mt-1"
       >
         {name}
       </motion.h1>
     </motion.a>
   );
 };
-
-interface IProjProps {
-  img: string;
-  name: string;
-  description: string;
-  link: string;
-  index: number;
-  color: string;
-}
