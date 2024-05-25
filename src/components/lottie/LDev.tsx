@@ -22,7 +22,7 @@ const LDev = () => {
         },
       }}
       viewport={{ once: true }}
-      className="absolute right-0 top-[40%] w-[450px] h-[450px] max-xl:left-[45%] max-xl:top-[75%] max-md:top-[100%] max-md:left-[-5%]"
+      className="absolute right-0 top-[40%] max-xl:left-[45%] max-xl:top-[75%] max-md:top-[100%] max-md:left-[-5%]"
     >
       {View}
     </motion.div>

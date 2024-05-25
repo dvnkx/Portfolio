@@ -1,4 +1,4 @@
-import bog_li from "../../public/assets/bog-li.jpg";
+import bog_li from "../../public/assets/bog_li.jpeg";
 import { motion } from "framer-motion";
 import {
   fadeOutOriginX,
@@ -9,6 +9,7 @@ import {
   fadeOutY,
 } from "../utils/animations";
 import { techGallery } from "../../public/assets/techs/index";
+import { getAge } from "../utils/getAge";
 
 export const About = () => {
   return (
@@ -160,8 +161,9 @@ export const About = () => {
             viewport={{ once: true }}
             className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
           >
-            My name is Bogdan Lisniak. I am 22 years old, I live in Kyiv,
-            Ukraine, and I&apos;m a self-taught Frontend Developer.
+            My name is Bogdan Lisniak. I am {getAge("2001/09/28")} years old, I
+            live in Kyiv, Ukraine, and I&apos;m a self-taught Frontend
+            Developer.
           </motion.p>
           <motion.p
             variants={fadeOutY}
