@@ -16,7 +16,7 @@ export const DropDownToggleButton = ({
 
   return (
     <button
-      className="hidden max-md:inline-block z-40 cursor-pointer relative h-10 w-10"
+      className="hidden max-md:inline-block z-40 cursor-pointer h-10 w-10"
       onClick={toggleIcon}
     >
       <svg
@@ -25,7 +25,7 @@ export const DropDownToggleButton = ({
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-8 h-8 dark:stroke-secondary-400 hover:stroke-secondary-300 dark:hover:stroke-secondary-300 transition-all absolute"
+        className="w-8 h-8 dark:stroke-secondary-400 hover:stroke-secondary-300 dark:hover:stroke-secondary-300 transition-all"
       >
         <AnimatePresence>
           {isOpen ? (
