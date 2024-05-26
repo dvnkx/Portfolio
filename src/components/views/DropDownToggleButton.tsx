@@ -16,7 +16,7 @@ export const DropDownToggleButton = ({
 
   return (
     <button
-      className="hidden max-md:inline-block z-40 cursor-pointer h-10 w-10"
+      className="hidden max-md:inline-block z-40 cursor-pointer max-md:visible h-10 w-10"
       onClick={toggleIcon}
     >
       <svg
