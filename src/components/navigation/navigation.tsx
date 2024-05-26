@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-// import { Link } from "react-scroll";
-// import { navigationLinks } from "../../../data/index";
-import { navVariants } from "./index";
-import { DropDownToggleButton } from "../views/index";
+import { Link } from "react-scroll";
+import { navigationLinks } from "../../../data/index";
+import { linkVariants, navVariants } from "./index";
+import { DropDownToggleButton, ThemeToggleButton } from "../views/index";
 import logo_dark from "../../../public/assets/logo-dark.svg";
 import logo_light from "../../../public/assets/logo-light.svg";
 
 export const Navigation = () => {
-  const [theme] = useState<string | null>(
+  const [theme, setTheme] = useState<string | null>(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
   );
   const [isOpen, toggleOpen] = useState(false);
@@ -62,7 +62,7 @@ export const Navigation = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="fixed top-0 left-0 bg-transparent z-40 w-full flex justify-between h-32 py-5 px-15 max-md:px-5 max-md:overflow-visible"
+      className="fixed top-0 left-0 bg-transparent z-40 w-full flex h-32 py-5 px-15 max-md:px-5 max-md:overflow-visible"
     >
       <a className="flex-none" href="/">
         <img
@@ -72,7 +72,7 @@ export const Navigation = () => {
         />
       </a>
       <DropDownToggleButton isOpen={isOpen} toggleOpen={toggleOpen} />
-      {/* <nav
+      <nav
         id="dropDown"
         className="flex max-md:absolute max-md:top-0 max-md:right-0 max-md:h-[150vh] max-md:w-0 max-md:bg-secondary-500 max-md:dark:bg-secondary-200 duration-500 easy-out transition-all"
       >
@@ -101,7 +101,7 @@ export const Navigation = () => {
             />
           </motion.div>
         </ul>
-      </nav> */}
+      </nav>
     </motion.header>
   );
 };
