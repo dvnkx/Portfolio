@@ -64,7 +64,7 @@ export const Navigation = () => {
       animate="visible"
       className="fixed top-0 left-0 bg-transparent z-40 w-full flex h-32 justify-between py-5 px-15 max-md:px-5 max-md:overflow-visible"
     >
-      <a className=" flex-none" href="/">
+      <a className="flex-none w-[88px] h-[88px]" href="/">
         <img
           alt="logo"
           className="w-full h-full"
