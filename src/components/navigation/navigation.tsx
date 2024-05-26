@@ -62,19 +62,19 @@ export const Navigation = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="fixed top-0 left-0 bg-transparent z-40 w-full flex h-32 justify-between py-5 px-15 max-md:px-5 max-md:overflow-visible"
+      className="fixed top-0 left-0 bg-transparent z-40 w-full flex justify-between h-32 py-5 px-15 max-md:px-5 max-md:overflow-visible"
     >
-      <a className="flex-none w-[88px] h-[88px]" href="/">
+      <a className="flex-none" href="/">
         <img
           alt="logo"
-          className="w-full h-full"
+          className="h-full"
           src={theme === "dark" ? logo_light : logo_dark}
         />
       </a>
       <DropDownToggleButton isOpen={isOpen} toggleOpen={toggleOpen} />
-      <nav
+      {/* <nav
         id="dropDown"
-        className="flex max-md:absolute max-md:top-0 max-md:right-0 max-md:h-[150vh] max-md:w-0  max-md:bg-secondary-500 max-md:dark:bg-secondary-200 duration-500 easy-out transition-all"
+        className="flex max-md:absolute max-md:top-0 max-md:right-0 max-md:h-[150vh] max-md:w-0 max-md:bg-secondary-500 max-md:dark:bg-secondary-200 duration-500 easy-out transition-all"
       >
         <ul className="flex justify-center items-center gap-x-16 text-words-100 text-lg max-md:flex-col max-md:m-10 max-md:justify-start max-md:mt-20  max-md:text-3xl max-md:gap-6 max-md:items-start max-md:transition-all ">
           {navigationLinks.map((link, i) => {
@@ -101,7 +101,7 @@ export const Navigation = () => {
             />
           </motion.div>
         </ul>
-      </nav>
+      </nav> */}
     </motion.header>
   );
 };

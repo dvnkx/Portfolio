@@ -1,6 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
 
+interface IDropDownToggleButton {
+  toggleOpen: Dispatch<SetStateAction<boolean>>;
+  isOpen: boolean;
+}
+
 export const DropDownToggleButton = ({
   isOpen,
   toggleOpen,
@@ -51,8 +56,3 @@ export const DropDownToggleButton = ({
     </button>
   );
 };
-
-interface IDropDownToggleButton {
-  toggleOpen: Dispatch<SetStateAction<boolean>>;
-  isOpen: boolean;
-}
