@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link } from "react-scroll";
-import { navigationLinks } from "../../../data/index";
-import { linkVariants, navVariants } from "./index";
-import { DropDownToggleButton, ThemeToggleButton } from "../views/index";
+// import { Link } from "react-scroll";
+// import { navigationLinks } from "../../../data/index";
+import { navVariants } from "./index";
+import { DropDownToggleButton } from "../views/index";
 import logo_dark from "../../../public/assets/logo-dark.svg";
 import logo_light from "../../../public/assets/logo-light.svg";
 
 export const Navigation = () => {
-  const [theme, setTheme] = useState<string | null>(
+  const [theme] = useState<string | null>(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
   );
   const [isOpen, toggleOpen] = useState(false);
