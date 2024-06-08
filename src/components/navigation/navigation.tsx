@@ -59,10 +59,11 @@ export const Navigation = () => {
 
   return (
     <motion.header
+      id="nav"
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="fixed top-0 left-0 z-40 w-full flex justify-between h-32 py-5 px-15 max-md:px-5 max-md:overflow-visible"
+      className="fixed top-0 left-0 z-40 flex justify-between h-32 py-5 px-15 max-md:px-5 max-md:overflow-visible"
     >
       <a className="flex-none" href="/">
         <img
