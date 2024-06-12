@@ -11,7 +11,7 @@ export const Footer = () => {
         whileInView="animate"
         viewport={{ once: true }}
         custom={50}
-        className="flex flex-wrap w-1/2 gap-8 md:gap-12 text-xl [&>*]:cursor-pointer"
+        className="flex flex-wrap gap-10 max-md:w-[50%] text-xl [&>*]:cursor-pointer "
       >
         {footerLinks.map((link, i) => {
           return (

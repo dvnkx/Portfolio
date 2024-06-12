@@ -41,7 +41,7 @@ export const About = () => {
             opacity: 1,
             y: 0,
             transition: {
-              delay: 1.2,
+              delay: 0.3,
               duration: 1.3,
               ease: [0.9, 0.1, 0.3, 0.96],
             },
@@ -60,7 +60,7 @@ export const About = () => {
             opacity: 1,
             y: 0,
             transition: {
-              delay: 1.2,
+              delay: 0.5,
               duration: 1.3,
               ease: [0.9, 0.1, 0.3, 0.96],
             },
@@ -98,7 +98,7 @@ export const About = () => {
               originX: [0, 0, 0, 0, 0, 0, 0.5],
               opacity: 1,
               transition: {
-                delay: 1.9,
+                delay: 0.5,
                 duration: 1.6,
                 ease: [0.9, 0.1, 0.3, 0.96],
               },
@@ -114,7 +114,7 @@ export const About = () => {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 2.9,
+                delay: 0.5,
                 duration: 1,
                 ease: [0.9, 0.1, 0.3, 0.96],
               },
@@ -126,22 +126,22 @@ export const About = () => {
         </div>
       </div>
       <div className="relative flex mt-12 ml-11 justify-between max-md:ml-0">
-        <div className="w-3/6 max-lg:w-full">
+        <div className="w-3/6 max-lg:w-full tracking-wide">
           <motion.h4
             variants={fadeOutX}
             initial="initial"
             whileInView={{
               opacity: 1,
-              y: 0,
+              x: 0,
               transition: {
-                delay: 1.7,
+                delay: 0.35,
                 duration: 1.3,
                 ease: [0.9, 0.1, 0.3, 0.96],
               },
             }}
             custom={-400}
             viewport={{ once: true }}
-            className="text-primary text-1xl font-light tracking-wide"
+            className="text-primary text-1xl font-light"
           >
             WHO AM I
           </motion.h4>
@@ -153,13 +153,13 @@ export const About = () => {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 2.1,
-                duration: 1.3,
+                delay: 0.4,
+                duration: 1,
                 ease: [0.9, 0.1, 0.3, 0.96],
               },
             }}
             viewport={{ once: true }}
-            className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
+            className="text-words-100 font-light text-lg mt-10 leading-relax"
           >
             My name is Bogdan Lisniak. I am {getAge("2001/09/28")} years old, I
             live in Kyiv, Ukraine, and I&apos;m a self-taught Frontend
@@ -173,13 +173,13 @@ export const About = () => {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 2.4,
-                duration: 1.3,
+                delay: 0.5,
+                duration: 1,
                 ease: [0.9, 0.1, 0.3, 0.96],
               },
             }}
             viewport={{ once: true }}
-            className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
+            className="text-words-100 font-light text-lg mt-10 leading-relax"
           >
             I've always been interested in how a virtual environment works under
             the hood. Out of awareness I was also interested in creating a
@@ -193,13 +193,13 @@ export const About = () => {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 2.7,
-                duration: 1.3,
+                delay: 0.5,
+                duration: 1,
                 ease: [0.9, 0.1, 0.3, 0.96],
               },
             }}
             viewport={{ once: true }}
-            className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
+            className="text-words-100 font-light text-lg mt-10 leading-relax"
           >
             I enjoy the constant change in the technologies used in the area and
             love diving into new frameworks and technologies.
@@ -212,13 +212,13 @@ export const About = () => {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 3,
-                duration: 1.3,
+                delay: 0.7,
+                duration: 1,
                 ease: [0.9, 0.1, 0.3, 0.96],
               },
             }}
             viewport={{ once: true }}
-            className="text-words-100 tracking-wide font-light text-lg mt-10 leading-relax"
+            className="text-words-100 font-light text-lg mt-10 leading-relax"
           >
             Spending time customizing, improving and tinkering with my work
             environment and tools is something I enjoy a lot, as it is something
@@ -234,7 +234,7 @@ export const About = () => {
             originX: [0, 0, 0, 0, 0, 0, 0.5],
             opacity: 1,
             transition: {
-              delay: 1.9,
+              delay: 0.5,
               duration: 1.6,
               ease: [0.9, 0.1, 0.3, 0.96],
             },
@@ -251,7 +251,7 @@ export const About = () => {
             opacity: 1,
             y: 0,
             transition: {
-              delay: 2.9,
+              delay: 1.5,
               duration: 1,
               ease: [0.9, 0.1, 0.3, 0.96],
             },
@@ -261,7 +261,7 @@ export const About = () => {
           src={bog_li}
         />
       </div>
-      <div className="mt-12 ml-11 max-md:ml-0 ">
+      <div className="mt-10 ml-11 max-md:ml-0 ">
         <motion.h4
           variants={fadeOutX}
           initial="initial"
@@ -269,7 +269,7 @@ export const About = () => {
             opacity: 1,
             x: 0,
             transition: {
-              delay: 3.1,
+              delay: 0.5,
               duration: 1.3,
               ease: [0.9, 0.1, 0.3, 0.96],
             },
@@ -288,7 +288,7 @@ export const About = () => {
               custom={i}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.5 }}
               className="w-[40px] h-[40px]  fill-secondary-300 "
             />
           ))}

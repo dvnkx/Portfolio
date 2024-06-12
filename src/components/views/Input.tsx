@@ -16,7 +16,7 @@ export const Input = ({ label, index, ...props }: IInputProps) => {
           opacity: 1,
           y: 0,
           transition: {
-            delay: 1.3 + index * 0.6,
+            delay: index / 10,
             duration: 1,
             ease: [0.9, 0.1, 0.3, 0.96],
           },
@@ -33,7 +33,7 @@ export const Input = ({ label, index, ...props }: IInputProps) => {
           opacity: 1,
           y: 0,
           transition: {
-            delay: 1.3 + index * 0.3,
+            delay: index / 10 + 0.1,
             duration: 1,
             ease: [0.9, 0.1, 0.3, 0.96],
           },

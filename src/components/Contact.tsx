@@ -79,7 +79,7 @@ export const Contact = () => {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 1.2,
+                delay: 0.3,
                 duration: 1.3,
                 ease: [0.9, 0.1, 0.3, 0.96],
               },
@@ -122,7 +122,7 @@ export const Contact = () => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 2.8,
+                  delay: 0.4,
                   duration: 1.3,
                   ease: [0.9, 0.1, 0.3, 0.96],
                 },
@@ -140,7 +140,7 @@ export const Contact = () => {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 3.2,
+                  delay: 0.5,
                   duration: 1.3,
                   ease: [0.9, 0.1, 0.3, 0.96],
                 },
@@ -159,7 +159,7 @@ export const Contact = () => {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 3.5,
+                delay: 0.6,
                 duration: 1.3,
                 ease: [0.9, 0.1, 0.3, 0.96],
               },

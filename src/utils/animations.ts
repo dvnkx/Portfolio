@@ -64,14 +64,14 @@ export const fadeOutOriginX = {
 export const oddEvenTranslate = {
   initial: (index: number) => ({
     opacity: 0,
-    translateY: index % 2 ? 100 : -100,
+    translateY: index % 2 ? 50 : -50,
   }),
   animate: (index: number) => ({
     opacity: 1,
     translateY: 0,
     transition: {
       duration: 0.8,
-      delay: 4 + index * 0.3,
+      delay: 0.5 + index * 0.3,
     },
   }),
 };
