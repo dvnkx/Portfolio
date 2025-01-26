@@ -20,7 +20,7 @@ export const navigationLinks = [
 export const footerLinks = [
   { href: "https://github.com/dvnkx", title: "GitHub" },
   {
-    href: "https://www.linkedin.com/in/bohdan-lisniak-02288526a/",
+    href: "https://www.linkedin.com/in/bohdan-lisniak-775883348/",
     title: " LinkedIn",
   },
   { href: "https://djinni.co/q/413f1d5caf/", title: "Djinni" },
